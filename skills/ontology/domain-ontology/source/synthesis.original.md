@@ -1,0 +1,3 @@
+🦾 Step 1.2: Domain Ontology Framework
+📋 Manus Command Protocol: Action 1.2.B
+"Our linguistic alignment is complete. Using our dialogue history and the global invariant rules, autonomously compile the system's authoritative Canonical Domain Ontology. Your analysis must independently structure: the core domain entities, resources, and nouns with absolute, mutually exclusive definitions; the precise actor profiles and external systems crossing the boundary; the logical or cardinal relationships connecting entities; and universal business invariants. You must include a comprehensive Synonym Blacklist to explicitly ban alternate terms that cause terminology drift."

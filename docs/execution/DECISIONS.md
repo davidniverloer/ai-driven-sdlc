@@ -971,3 +971,31 @@ New work must use the "Process" label and `processes/` paths. Existing
 historical command records and proposal evidence may continue to mention
 Process Trees as historical context. The compatibility path can be removed only
 after versioned migration support exists.
+
+## ADR-0034: Add First Skill Proposal Example
+
+Date: 2026-07-04
+Status: Accepted
+
+### Context
+
+The framework is installable and has first-run guidance, but users and agents
+still need one concrete reference proposal to understand the expected
+`/skill-create` output shape before automation exists.
+
+### Decision
+
+Add `examples/first-skill-proposal/` as a non-canonical reference proposal
+package and install examples into:
+
+```text
+.ai-sdlc/examples/
+```
+
+Add `docs/guides/FIRST_SKILL_PROPOSAL.md` to explain how to use the example.
+
+### Consequences
+
+Installed users get a concrete proposal package to compare against generated
+proposal output. The example is documentation and reference material only. It
+does not create a canonical skill, modify the Process, or add automation.

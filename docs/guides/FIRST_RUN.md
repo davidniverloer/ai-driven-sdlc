@@ -14,6 +14,7 @@ From the target repository root, confirm these files exist:
 .ai-sdlc/manifest.txt
 .ai-sdlc/commands/manifest.md
 .ai-sdlc/processes/default.md
+.ai-sdlc/examples/first-skill-proposal/README.md
 .ai-sdlc/uninstall.sh
 ```
 
@@ -27,6 +28,7 @@ Ask the agent to read these files in order:
 .ai-sdlc/commands/manifest.md
 .ai-sdlc/processes/default.md
 .ai-sdlc/guides/SKILL_CREATE_COMMAND.md
+.ai-sdlc/guides/FIRST_SKILL_PROPOSAL.md
 .ai-sdlc/framework/PROMPT_IMMUTABILITY.md
 .ai-sdlc/execution/VALIDATION_PROTOCOL.md
 ```

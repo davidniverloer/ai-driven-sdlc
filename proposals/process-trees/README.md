@@ -1,7 +1,9 @@
-# Process Tree Proposals
+# Legacy Process Tree Proposal Path
 
-Official intake zone for proposed Process Trees or Process Tree changes.
+`proposals/process-trees/` is retained as a compatibility path.
 
-Process Tree proposals must define execution order, repository placement,
-artifact dependencies, approval gates, validation evidence, and promotion
-readiness before becoming canonical or recommended Process Trees.
+New process proposals should use:
+
+```text
+proposals/processes/
+```

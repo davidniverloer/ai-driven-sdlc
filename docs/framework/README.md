@@ -16,10 +16,9 @@ how those assets are changed, validated, and traced over time.
   expectations, and prohibited actions.
 - `LIFECYCLE_MODEL.md` defines proposal, creation, validation, publication,
   maintenance, and deprecation states for all asset types.
-- `PROCESS_TREE.md` is a legacy compatibility pointer to the active canonical
-  Process Tree at `process-trees/default.md`.
-- `PROCESS_TREE_INTEGRATION_RULES.md` defines how skill proposals map to Process
-  Trees.
+- `PROCESS_MODEL.md` defines the active canonical Process at
+  `processes/default.md`.
+- `PROCESS_INTEGRATION_RULES.md` defines how skill proposals map to Processes.
 - `PROMOTION_DECISION_MODEL.md` defines promotion decision inputs, outputs,
   recommendation structure, and traceability requirements.
 - `PROMPT_IMMUTABILITY.md` defines preservation rules for prompts and protocols
@@ -45,7 +44,7 @@ how those assets are changed, validated, and traced over time.
   Evolution System.
 - `SKILL_DIFF_MODEL.md` defines how skill differences are classified for
   duplicate detection, enhancement detection, replacement review, version
-  impact, promotion, compatibility, and Process Tree analysis.
+  impact, promotion, compatibility, and Process analysis.
 - `SKILL_DIFF_REPORT_MODEL.md` defines the canonical Skill Diff Report
   structure.
 - `SKILL_PROPOSAL_MODEL.md` defines the canonical package contract for proposed
@@ -91,8 +90,8 @@ how those assets are changed, validated, and traced over time.
 The A/B Protocol Model classifies submitted prompt structures. The asset model
 defines what the framework governs. The governance model defines how changes are
 controlled. The lifecycle model defines maturity states. The active default
-Process Tree at `process-trees/default.md` defines canonical execution order and
-artifact flow. Process Tree Integration Rules define how skill proposals relate
+Process at `processes/default.md` defines canonical execution order and
+artifact flow. Process Integration Rules define how skill proposals relate
 to that execution model. Prompt Immutability protects submitted prompts and
 protocols as source artifacts. Proposal Architecture defines the review and
 promotion path for new framework contributions. The Repository Mapping Engine
@@ -111,7 +110,7 @@ realistic A/B protocol example. Skill Intake Validation defines the mandatory
 checks before promotion consideration. The skill model defines reusable
 capabilities. The Skill Diff Model classifies differences between skills before
 promotion, replacement, duplicate handling, compatibility review, versioning, or
-Process Tree change. The Skill Lifecycle defines state transitions from draft
+Process change. The Skill Lifecycle defines state transitions from draft
 proposal to canonical, deprecated, archived, or rejected. The Skill Package
 Contract defines the required structure for admitted canonical skills. The Skill
 Promotion Engine defines how validated proposals are evaluated for canonical

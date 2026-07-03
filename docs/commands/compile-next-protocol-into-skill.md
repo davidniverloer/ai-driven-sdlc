@@ -14,8 +14,8 @@ procedure, a workflow-oriented protocol, or a capability protocol that should be
 evaluated as a future framework skill.
 
 The command solves the intake problem: new expertise needs a governed path into
-the framework, but approved skills, approved workflows, and canonical Process
-Trees must remain stable. The command generates proposals only.
+the framework, but approved skills, approved workflows, and canonical Processes
+must remain stable. The command generates proposals only.
 
 ## Trigger Phrase
 
@@ -51,7 +51,7 @@ Capability Classification
 ↓
 Repository Mapping
 ↓
-Process Tree Mapping
+Process Mapping
 ↓
 Similarity Analysis
 ↓
@@ -88,7 +88,7 @@ The command may not:
 submitted prompts.
 
 Source prompt copies must remain separate from derived reports, metadata,
-classification, repository placement, Process Tree impact, validation findings,
+classification, repository placement, Process impact, validation findings,
 and promotion recommendations.
 
 ## Repository Placement Rules
@@ -104,21 +104,21 @@ Repository placement is governed by
 
 The command must not create canonical skills directly.
 
-## Process Tree Rules
+## Process Rules
 
 The command must:
 
-- inspect the active canonical Process Tree
-- determine Process Tree impact
-- generate `process-tree-impact.md`
+- inspect the active canonical Process
+- determine Process impact
+- generate `process-impact.md`
 
-The active canonical Process Tree is:
+The active canonical Process is:
 
 ```text
-process-trees/default.md
+processes/default.md
 ```
 
-The command must not modify canonical Process Trees directly.
+The command must not modify canonical Processes directly.
 
 ## Similarity Analysis Rules
 
@@ -142,7 +142,7 @@ location:
 proposal.yaml
 classification.md
 repository-placement.md
-process-tree-impact.md
+process-impact.md
 approval-checklist.md
 source/
 validation-report.md
@@ -158,7 +158,7 @@ The command must invoke:
 - Prompt Fidelity Validation
 - Capability Validation
 - Repository Mapping Validation
-- Process Tree Validation
+- Process Validation
 - Proposal Validation
 
 Validation failures must be reported. They must not be resolved by rewriting
@@ -171,7 +171,7 @@ The command must output:
 - detected protocol type
 - detected capability
 - repository location
-- Process Tree impact
+- Process impact
 - similarity outcome
 - proposal location
 - validation outcome
@@ -187,4 +187,4 @@ The command must not:
 - promote skills
 - modify approved skills
 - modify approved workflows
-- modify canonical Process Trees
+- modify canonical Processes

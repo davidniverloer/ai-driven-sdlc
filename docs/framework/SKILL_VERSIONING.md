@@ -4,7 +4,7 @@
 
 Skill versioning records the compatibility impact of changes to skills and skill
 proposals. It gives agents a consistent way to reason about whether a change is
-patch-level, minor, or major before promotion, registry update, Process Tree
+patch-level, minor, or major before promotion, registry update, Process
 update, or downstream use.
 
 This document defines the current governance boundary for skill version impact.
@@ -49,7 +49,7 @@ incompatibly, or invalidates existing consumers.
 
 Minor impact applies when a change adds compatible capability, expands scope
 without breaking existing consumers, or introduces optional compatible
-dependencies or Process Tree placements.
+dependencies or Process placements.
 
 ### Patch
 
@@ -68,7 +68,7 @@ only retained as audit evidence.
 - registry Current Version must reflect canonical skill state
 - breaking changes require explicit governance approval
 - replacement decisions require version impact review
-- Process Tree impacts must be reviewed before version impact is finalized
+- Process impacts must be reviewed before version impact is finalized
 
 ## Relationship to Skill Diff
 

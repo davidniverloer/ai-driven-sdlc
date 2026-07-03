@@ -8,7 +8,7 @@ assets.
 
 It exists because validation alone does not admit a skill into the canonical
 framework. A proposal may be structurally valid but still require governance
-approval, compatibility review, Process Tree review, repository placement
+approval, compatibility review, Process review, repository placement
 approval, and canonical registration planning.
 
 The Skill Promotion Engine differs from the Skill Intake Compiler:
@@ -38,7 +38,7 @@ complete.
 **Compatibility Assessment**
 
 Evaluate whether promotion would affect existing skills, workflows, Process
-Trees, schemas, installation assets, adapters, or governance contracts.
+Processes, schemas, installation assets, adapters, or governance contracts.
 
 **Canonical Skill Registration**
 
@@ -59,7 +59,7 @@ The Skill Promotion Engine consumes:
 
 - validated skill proposals
 - validation reports
-- Process Tree impact reports
+- Process impact reports
 - repository placement reports
 - governance reports
 - approval checklists
@@ -98,7 +98,7 @@ Promotion requires:
 - prompt fidelity verified
 - proposal validation passed
 - repository placement approved
-- Process Tree impact reviewed
+- Process impact reviewed
 - governance compliance verified
 - compatibility impact assessed
 - breaking-change impact assessed
@@ -168,7 +168,7 @@ The engine may not:
 - bypass governance
 - bypass validation
 - execute protected git operations without approval
-- alter canonical Process Trees directly
+- alter canonical Processes directly
 
 ## Canonical Skill Admission
 
@@ -178,7 +178,7 @@ A skill becomes canonical only after:
 - promotion evaluation recommends admission
 - required governance approval is recorded
 - repository placement is approved
-- Process Tree impact is approved or explicitly terminal
+- Process impact is approved or explicitly terminal
 - canonical registration requirements are satisfied
 - protected operations, if any, are approved separately
 - post-promotion validation is completed
@@ -202,7 +202,7 @@ exists, promotion packages must identify:
 - source proposal ID
 - promotion decision
 - approval record
-- Process Tree relationship
+- Process relationship
 - validation evidence
 
 ## Future Automation Boundaries
@@ -222,5 +222,5 @@ Future automation may never:
 - bypass approval
 - silently register canonical skills
 - overwrite approved skills
-- modify canonical Process Trees without approval
+- modify canonical Processes without approval
 - perform protected git operations without approval

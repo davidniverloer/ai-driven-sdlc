@@ -7,11 +7,11 @@ skill change before it can become canonical.
 
 Skill Proposals exist so ai-driven-sdlc can accept new expertise without
 modifying approved skills directly. They connect source prompts, protocol
-classification, repository placement, Process Tree impact, validation evidence,
+classification, repository placement, Process impact, validation evidence,
 and approval readiness into one reviewable package.
 
-Process Tree impact is governed by
-`docs/framework/PROCESS_TREE_INTEGRATION_RULES.md`.
+Process impact is governed by
+`docs/framework/PROCESS_INTEGRATION_RULES.md`.
 
 Skill Proposals differ from Canonical Skills:
 
@@ -30,7 +30,7 @@ The canonical structure of a skill proposal is:
   proposal.yaml
   classification.md
   repository-placement.md
-  process-tree-impact.md
+  process-impact.md
   approval-checklist.md
   source/
     README.md
@@ -42,7 +42,7 @@ At minimum, every Skill Proposal package must contain:
 - `proposal.yaml`
 - `classification.md`
 - `repository-placement.md`
-- `process-tree-impact.md`
+- `process-impact.md`
 - `approval-checklist.md`
 - `source/`
 - `source/README.md`
@@ -61,7 +61,7 @@ The package is a proposal contract, not an implementation schema.
 - `status`
 - `source_basis`
 - `proposed_repository_location`
-- `process_tree_impact`
+- `process_impact`
 - `created_date`
 
 This document defines the contract only. It does not define a formal schema yet.
@@ -78,7 +78,7 @@ Expected values:
 - `status`: lifecycle state
 - `source_basis`: source prompt, protocol, command, or submission reference
 - `proposed_repository_location`: proposed future path under `skills/`
-- `process_tree_impact`: none, update_required, proposed_node, or other
+- `process_impact`: none, update_required, proposed_node, or other
   documented impact status
 - `created_date`: ISO date
 
@@ -131,23 +131,23 @@ reinterpret them.
 The report proposes placement only. It must not create or modify canonical skill
 files directly.
 
-## Process Tree Impact Report
+## Process Impact Report
 
-`process-tree-impact.md` must answer:
+`process-impact.md` must answer:
 
 - Does this create a new node?
 - Does this extend an existing node?
 - Does this introduce a new artifact?
 - Does this introduce a new execution path?
-- Does `PROCESS_TREE.md` require updates?
+- Does `PROCESS_MODEL.md` require updates?
 
-When the active canonical Process Tree is affected, the report should reference
-`process-trees/default.md`. Legacy references to `docs/framework/PROCESS_TREE.md`
+When the active canonical Process is affected, the report should reference
+`processes/default.md`. Legacy references to `docs/framework/PROCESS_TREE.md`
 must be treated as compatibility pointers only.
 
-The report must follow the Process Tree Integration Rules. No Skill Proposal may
-be promoted without a valid Process Tree placement or an explicit terminal or
-out-of-tree classification.
+The report must follow the Process Integration Rules. No Skill Proposal may
+be promoted without a valid Process placement or an explicit terminal or
+out-of-process classification.
 
 ## Approval Checklist
 
@@ -156,7 +156,7 @@ out-of-tree classification.
 - prompt fidelity verification
 - capability verification
 - repository placement verification
-- process tree verification
+- process verification
 - governance verification
 - validation verification
 
@@ -202,8 +202,8 @@ Before promotion, a Skill Proposal must have:
 - protocol classification
 - capability classification
 - repository placement report
-- Process Tree impact report
-- valid Process Tree placement or explicit terminal classification
+- Process impact report
+- valid Process placement or explicit terminal classification
 - approval checklist
 - prompt fidelity verification
 - compatibility assessment

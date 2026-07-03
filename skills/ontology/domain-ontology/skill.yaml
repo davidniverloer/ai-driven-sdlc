@@ -5,10 +5,10 @@ protocol_type: "ab_protocol"
 lifecycle_state: "Canonical"
 version: "1.0.0"
 repository_location: "skills/ontology/domain-ontology/"
-process_tree_nodes:
+process_nodes:
   - "PT-004"
 dependencies:
-  - "process-trees/default.md"
+  - "processes/default.md"
   - "PT-003 Wedge Definition"
   - "skills/strategy/concept-interrogation/"
 source_proposal: "proposals/skills/ontology/domain-ontology-framework/"

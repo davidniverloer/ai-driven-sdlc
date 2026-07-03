@@ -10,7 +10,7 @@ Skill package validation applies before a skill is admitted as canonical and
 whenever a canonical skill package is materially changed through governance.
 
 Validation checks package structure, metadata, source prompt preservation,
-repository placement, Process Tree relationships, lifecycle state, dependencies,
+repository placement, Process relationships, lifecycle state, dependencies,
 examples, and output expectations.
 
 ## Required File Validation
@@ -39,12 +39,12 @@ Validate that `skill.yaml` includes:
 - `lifecycle_state`
 - `version`
 - `repository_location`
-- `process_tree_nodes`
+- `process_nodes`
 - `dependencies`
 - `source_proposal`
 
 Validation must check presence and consistency with package location, lifecycle
-records, Process Tree references, and registry expectations.
+records, Process references, and registry expectations.
 
 ## README Validation
 
@@ -55,7 +55,7 @@ Validate that `README.md` includes:
 - inputs
 - outputs
 - dependencies
-- Process Tree relationship
+- Process relationship
 
 The README must remain agent-agnostic and must not replace source prompts.
 
@@ -67,7 +67,7 @@ Validate that `output-contract.md` defines:
 - artifact expectations
 - validation expectations
 
-The output contract must be consistent with Process Tree artifact flow and known
+The output contract must be consistent with Process artifact flow and known
 workflow handoffs.
 
 ## Source Prompt Validation
@@ -96,13 +96,13 @@ Validate that:
 - canonical registry registration is possible
 - no approved asset is overwritten
 
-## Process Tree Validation
+## Process Validation
 
 Validate that:
 
-- `process_tree_nodes` exists
-- referenced Process Tree nodes exist or are proposed
-- terminal or out-of-tree classification is explicit when no node applies
+- `process_nodes` exists
+- referenced Process nodes exist or are proposed
+- terminal or out-of-process classification is explicit when no node applies
 - consumed and produced artifacts align with `output-contract.md`
 - approval gate relationships are documented when applicable
 
@@ -121,7 +121,7 @@ Validate that:
 
 Validate that dependencies are declared and traceable.
 
-Dependencies may include skills, workflows, schemas, Process Tree nodes,
+Dependencies may include skills, workflows, schemas, Process nodes,
 governance documents, adapters, or external tools.
 
 ## Validation Outcomes

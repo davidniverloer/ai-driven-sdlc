@@ -88,14 +88,14 @@ Validate:
 Expectation: adapters extend the framework for specific environments while the
 core remains agent-agnostic and vendor-neutral.
 
-## Process Tree Integrity
+## Process Integrity
 
-Objective: ensure the canonical Process Tree remains a complete and coherent
+Objective: ensure the canonical Process remains a complete and coherent
 execution map.
 
 Validate:
 
-- `process-trees/default.md` exists
+- `processes/default.md` exists
 - every referenced skill exists or is marked proposed
 - every node has required fields
 - every node has a Repository Location
@@ -103,32 +103,32 @@ Validate:
 - every produced artifact has a downstream consumer or explicit terminal purpose
 - no orphan nodes exist
 - human gates are explicitly marked
-- canonical trees are referenced in `process-trees/README.md`
+- canonical processes are referenced in `processes/README.md`
 - legacy references point to the canonical location
 
-Expectation: `process-trees/default.md` accurately describes execution
+Expectation: `processes/default.md` accurately describes execution
 order, artifact flow, dependencies, and human approval gates.
 
-## Process Tree Validation
+## Process Validation
 
-Objective: ensure every stored Process Tree is complete, discoverable, and safe
+Objective: ensure every stored Process is complete, discoverable, and safe
 to use.
 
 Validate:
 
-- `process-trees/default.md` exists
-- every process tree has Tree ID, Version, Status, Intended Use, and Source
+- `processes/default.md` exists
+- every process has Process ID, Version, Status, Intended Use, and Source
   Basis
 - every node follows the node contract
 - every repository location is present
 - every consumed artifact is produced earlier or declared external
 - every produced artifact has a downstream consumer or terminal purpose
-- canonical process trees are not overwritten without approval
-- canonical trees are referenced in `process-trees/README.md`
+- canonical processes are not overwritten without approval
+- canonical processes are referenced in `processes/README.md`
 - legacy references point to the canonical location
-- `process-trees/README.md` references all process tree files
+- `processes/README.md` references all process files
 
-Expectation: process trees under `process-trees/` can be selected and compared
+Expectation: processes under `processes/` can be selected and compared
 without ambiguity.
 
 ## Prompt Fidelity Validation
@@ -184,7 +184,7 @@ Validate:
 - proposal ownership exists
 - promotion readiness requirements are met
 - source material is preserved when applicable
-- Process Tree impact is assessed when applicable
+- Process impact is assessed when applicable
 - validation evidence is recorded
 - approval requirements are identified before promotion
 
@@ -202,13 +202,13 @@ Validate:
 - prompt fidelity
 - classification completeness
 - repository placement completeness
-- process tree impact completeness
+- process impact completeness
 - approval checklist completeness
 - required `proposal.yaml` metadata is present
 - source prompts are preserved under `source/`
 
 Expectation: no proposed skill may bypass the required package structure,
-prompt preservation, repository placement report, Process Tree impact report, or
+prompt preservation, repository placement report, Process impact report, or
 approval checklist.
 
 ## Skill Intake Validation
@@ -224,34 +224,34 @@ Validate:
 - protocol classification exists
 - capability classification exists
 - repository mapping exists
-- process tree mapping exists
+- process mapping exists
 - proposal package completeness
 - prompt fidelity
 - approved assets were not modified directly
 - validation report exists before promotion consideration
 
 Expectation: every accepted intake produces a governed proposal package with
-classification, mapping, Process Tree impact, and preserved source prompts.
+classification, mapping, Process impact, and preserved source prompts.
 
-## Process Tree Integration Validation
+## Process Integration Validation
 
 Objective: ensure proposed skills have a valid relationship to the execution
 model before promotion.
 
 Validate:
 
-- proposed skill has `process-tree-impact.md`
-- affected tree is identified
+- proposed skill has `process-impact.md`
+- affected process is identified
 - affected node is identified or new node is proposed
 - consumed artifacts are declared
 - produced artifacts are declared
 - approval gate impact is declared
 - execution order impact is declared
-- canonical tree modifications require approval
-- terminal or out-of-tree classification is explicit when no placement is
+- canonical process modifications require approval
+- terminal or out-of-process classification is explicit when no placement is
   proposed
 
-Expectation: no proposed skill may be promoted without valid Process Tree
+Expectation: no proposed skill may be promoted without valid Process
 placement or explicit terminal classification.
 
 ## Promotion Readiness Validation
@@ -261,7 +261,7 @@ Objective: ensure validated proposals are ready for promotion consideration.
 Validate:
 
 - proposal validation complete
-- process tree review complete
+- process review complete
 - governance review complete
 - repository placement approved
 - prompt fidelity verified
@@ -270,7 +270,7 @@ Validate:
 - promotion authority identified
 
 Expectation: no proposal enters promotion review without validation evidence,
-Process Tree review, governance review, approved placement, and verified prompt
+Process review, governance review, approved placement, and verified prompt
 fidelity.
 
 ## Skill Lifecycle Validation
@@ -299,18 +299,18 @@ Validate:
 - canonical skills have registry entries
 - registry entries have valid lifecycle states
 - repository locations exist
-- Process Tree references exist
+- Process references exist
 - dependencies are declared
 - deprecated skills retain replacement references where applicable
 - archived skills remain discoverable
 
 Expectation: registry entries accurately reflect skill lifecycle, repository
-placement, Process Tree relationships, and dependencies.
+placement, Process relationships, and dependencies.
 
 ## Skill Diff Validation
 
 Objective: ensure skill comparisons are complete, traceable, and safe for
-promotion, versioning, and Process Tree review.
+promotion, versioning, and Process review.
 
 Validate:
 
@@ -318,7 +318,7 @@ Validate:
 - similarity outcome exists
 - version impact exists
 - promotion impact exists
-- Process Tree impact exists
+- Process impact exists
 - compared assets are identified
 - prompt fidelity is preserved
 
@@ -329,7 +329,7 @@ prompts.
 ## Repository Mapping Validation
 
 Objective: ensure repository placement recommendations are deterministic,
-traceable, collision-aware, and aligned with Process Trees.
+traceable, collision-aware, and aligned with Processes.
 
 Validate:
 
@@ -337,7 +337,7 @@ Validate:
 - repository path exists or is proposed
 - placement rationale exists
 - collision analysis exists
-- Process Tree relationship exists
+- Process relationship exists
 - affected assets are identified
 - approved assets are not overwritten
 
@@ -371,7 +371,7 @@ Validate:
 - required files exist
 - required metadata exists
 - source prompts exist
-- Process Tree references exist
+- Process references exist
 - lifecycle state exists
 - package contract compliance exists
 - output contract exists
@@ -391,7 +391,7 @@ Validate:
 - protocol classification
 - capability classification
 - repository mapping
-- Process Tree mapping
+- Process mapping
 - similarity analysis
 - proposal package generation
 - prompt fidelity
@@ -416,7 +416,7 @@ Validate:
 - protocol classification exists
 - capability classification exists
 - repository mapping exists
-- Process Tree impact exists
+- Process impact exists
 - similarity analysis exists
 - proposal package exists
 - validation report exists
@@ -433,14 +433,14 @@ Validate:
 
 - promotion eligibility
 - governance compliance
-- process tree review
+- process review
 - canonical asset protection
 - traceability completeness
 - prompt fidelity preservation
 - lifecycle transition validity
 
 Expectation: no proposal is promoted without eligibility, governance compliance,
-Process Tree review, canonical asset protection, and durable traceability.
+Process review, canonical asset protection, and durable traceability.
 
 ## Installation Integrity
 

@@ -7,7 +7,7 @@ A/B protocol without implementing the Skill Intake Compiler or any automation.
 
 The simulation checks whether the existing architecture can detect an intake
 trigger, recognize an A/B protocol, classify capability, map repository
-placement, map Process Tree impact, reason about similarity, describe proposal
+placement, map Process impact, reason about similarity, describe proposal
 package outputs, apply validation, and determine promotion readiness.
 
 Outside the scope:
@@ -58,7 +58,7 @@ Expected behavior:
 - preserve both submitted prompts verbatim
 - begin protocol recognition
 - do not rewrite or optimize source prompts
-- do not modify approved skills, workflows, or Process Trees
+- do not modify approved skills, workflows, or Processes
 
 ## Step 2 — Protocol Recognition
 
@@ -118,14 +118,14 @@ Affected assets:
 
 - possible future skill under `skills/ux/`
 - possible proposal under `proposals/skills/`
-- possible Process Tree mapping near UX reasoning nodes
+- possible Process mapping near UX reasoning nodes
 
-## Step 5 — Process Tree Mapping
+## Step 5 — Process Mapping
 
-Affected Process Tree:
+Affected Process:
 
 ```text
-process-trees/default.md
+processes/default.md
 ```
 
 Affected node:
@@ -146,7 +146,7 @@ Rationale:
 - it consumes cognitive-friction and task-architecture style artifacts
 - it may produce a targeted onboarding review artifact
 - canonical placement should require approval because it would extend the
-  default Process Tree
+  default Process
 
 Expected artifact impact:
 
@@ -156,7 +156,7 @@ Expected artifact impact:
 Approval gate impact:
 
 - no immediate new gate recommended
-- canonical integration would require Process Tree approval
+- canonical integration would require Process approval
 
 ## Step 6 — Similarity Analysis
 
@@ -189,7 +189,7 @@ Expected outputs only. No files are created in this simulation.
 proposal.yaml
 classification.md
 repository-placement.md
-process-tree-impact.md
+process-impact.md
 approval-checklist.md
 source/
   discovery.original.md
@@ -206,7 +206,7 @@ protocol_type: ab_protocol
 version: 0.1.0
 status: Draft
 proposed_repository_location: skills/ux/onboarding-friction-review/
-process_tree_impact: experimental_extension
+process_impact: experimental_extension
 ```
 
 Source preservation:
@@ -239,7 +239,7 @@ Expected warning:
 
 - proposed location should be checked against future canonical UX skill registry
 
-Process Tree Validation:
+Process Validation:
 
 ```text
 PASS_WITH_WARNINGS
@@ -247,7 +247,7 @@ PASS_WITH_WARNINGS
 
 Expected warning:
 
-- extension to canonical `process-trees/default.md` requires approval before
+- extension to canonical `processes/default.md` requires approval before
   canonical integration
 
 Proposal Validation:
@@ -274,7 +274,7 @@ Blockers:
 - no validation report exists
 - no approval record exists
 - no canonical UX skill registry exists for similarity confirmation
-- canonical Process Tree extension has not been approved
+- canonical Process extension has not been approved
 
 Recommendations:
 
@@ -290,7 +290,7 @@ Strengths:
 - the architecture can preserve A/B prompt fidelity
 - protocol classification is clear
 - capability classification has an obvious target
-- repository mapping and Process Tree mapping are separable
+- repository mapping and Process mapping are separable
 - validation outcomes can express warnings without hiding blockers
 
 Weaknesses:
@@ -303,7 +303,7 @@ Weaknesses:
 Gaps:
 
 - no failed-intake record format
-- no controlled vocabulary for Process Tree placement outcomes
+- no controlled vocabulary for Process placement outcomes
 - no schema for `proposal.yaml`
 - no schema for `validation-report.md`
 - no canonical registry for promoted skills
@@ -313,4 +313,4 @@ Future improvements:
 - add schema-backed proposal metadata
 - add validation report template to Skill Proposal packages
 - define a Canonical Skill Registry
-- define experimental-to-canonical Process Tree promotion rules
+- define experimental-to-canonical Process promotion rules

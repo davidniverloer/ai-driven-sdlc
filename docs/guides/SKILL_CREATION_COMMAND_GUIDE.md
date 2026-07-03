@@ -6,8 +6,7 @@ The Skill Creation Command is the user-facing entry point for turning submitted
 prompts and protocols into ai-driven-sdlc skill proposals.
 
 It exists so contributors can bring new expertise into the framework without
-directly changing approved skills, approved workflows, or canonical Process
-Trees. The command routes submissions through the Skill Evolution System, where
+directly changing approved skills, approved workflows, or canonical Processes. The command routes submissions through the Skill Evolution System, where
 they are classified, mapped, packaged, validated, and given a promotion
 recommendation.
 
@@ -59,7 +58,7 @@ Capability Classification
 ↓
 Repository Mapping
 ↓
-Process Tree Mapping
+Process Mapping
 ↓
 Similarity Analysis
 ↓
@@ -83,8 +82,8 @@ or bootstrapping.
 Repository Mapping: the framework determines where the proposed skill would
 belong if it were later promoted.
 
-Process Tree Mapping: the framework determines how the proposed skill relates to
-the active canonical Process Tree.
+Process Mapping: the framework determines how the proposed skill relates to
+the active canonical Process.
 
 Similarity Analysis: the framework checks whether the submission appears to be
 new, an enhancement, a duplicate, a replacement, or a workflow component.
@@ -93,7 +92,7 @@ Proposal Package Generation: the framework creates proposal files under the
 appropriate proposal location.
 
 Validation: the framework checks prompt fidelity, classification, repository
-mapping, Process Tree impact, and proposal completeness.
+mapping, Process impact, and proposal completeness.
 
 Promotion Recommendation: the framework recommends whether the proposal appears
 ready for promotion consideration, should be revised, or should be blocked.
@@ -147,7 +146,7 @@ The command generates a proposal package containing:
 proposal.yaml
 classification.md
 repository-placement.md
-process-tree-impact.md
+process-impact.md
 approval-checklist.md
 source/
 validation-report.md
@@ -161,7 +160,7 @@ repository target, and traceability fields.
 `repository-placement.md` explains where the proposed skill would live if
 promoted and records placement rationale or collisions.
 
-`process-tree-impact.md` explains how the proposed skill relates to Process Tree
+`process-impact.md` explains how the proposed skill relates to Process
 nodes, branches, artifact flow, execution order, and approval gates.
 
 `approval-checklist.md` records review expectations before promotion can be
@@ -172,15 +171,15 @@ protocols.
 
 `validation-report.md` records validation results and blockers.
 
-## Process Tree Integration
+## Process Integration
 
-Every proposed skill must be checked against the active canonical Process Tree.
+Every proposed skill must be checked against the active canonical Process.
 
-Process Tree placement determines when a skill would run, what artifacts it
+Process placement determines when a skill would run, what artifacts it
 would consume, what artifacts it would produce, and whether it affects approval
 gates or execution order.
 
-Process Tree impact analysis is required because repository placement alone
+Process impact analysis is required because repository placement alone
 does not prove that a skill fits the framework execution model.
 
 ## Similarity Analysis
@@ -212,7 +211,7 @@ Validation checks include:
 - Prompt Fidelity Validation
 - Capability Validation
 - Repository Mapping Validation
-- Process Tree Validation
+- Process Validation
 - Proposal Validation
 
 Validation confirms that the proposal package is complete enough for review and
@@ -238,7 +237,7 @@ The command does not:
 
 - modify approved skills
 - modify approved workflows
-- modify canonical Process Trees
+- modify canonical Processes
 - bypass governance
 - bypass validation
 

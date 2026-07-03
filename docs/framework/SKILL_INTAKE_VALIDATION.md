@@ -8,7 +8,7 @@ Intake Compiler, proposal packages, and the Promotion Pipeline.
 It exists because proposal generation alone does not make a proposed skill safe
 to review, approve, or promote. A generated proposal must prove that it
 preserves source prompts, uses a valid protocol classification, maps to a valid
-capability, has a justified repository placement, has Process Tree impact
+capability, has a justified repository placement, has Process impact
 analysis, satisfies proposal package requirements, and complies with governance.
 
 Skill Intake Validation prevents:
@@ -17,7 +17,7 @@ Skill Intake Validation prevents:
 - invalid protocol classification
 - incorrect capability mapping
 - silent repository placement conflicts
-- missing Process Tree impact analysis
+- missing Process impact analysis
 - incomplete proposal packages
 - governance bypass
 - direct modification of approved assets
@@ -72,17 +72,17 @@ Verify:
 
 Repository placement validation must not create or modify canonical assets.
 
-### Process Tree Validation
+### Process Validation
 
 Verify:
 
-- process tree impact exists
+- process impact exists
 - affected nodes are identified
 - artifacts are identified
 - execution impact is identified
 
-If a proposal has no valid Process Tree placement, it must explicitly identify a
-terminal or out-of-tree classification.
+If a proposal has no valid Process placement, it must explicitly identify a
+terminal or out-of-process classification.
 
 ### Proposal Package Validation
 
@@ -100,7 +100,7 @@ For Skill Proposals, mandatory files are defined in
 Verify:
 
 - proposal complies with `AGENTS.md`
-- proposal complies with Process Tree Governance
+- proposal complies with Process Governance
 - proposal complies with Proposal Architecture
 - proposal does not modify approved assets directly
 - proposal does not bypass validation, approval, or promotion governance
@@ -126,7 +126,7 @@ Required behavior:
 - record warnings clearly
 - allow review to continue
 - require reviewer acknowledgment before promotion consideration
-- prevent promotion if warnings indicate unresolved compatibility, Process Tree,
+- prevent promotion if warnings indicate unresolved compatibility, Process,
   or governance risk
 
 ### FAIL
@@ -174,10 +174,10 @@ The proposal fails validation or receives blocking warnings. The placement must
 be corrected, or the conflict must be explicitly resolved before promotion
 consideration.
 
-**Process Tree Validation Fails**
+**Process Validation Fails**
 
 The proposal fails validation when affected nodes, artifacts, execution impact,
-or approval gate impact are missing or inconsistent. A valid Process Tree
+or approval gate impact are missing or inconsistent. A valid Process
 placement or explicit terminal classification is required.
 
 **Proposal Package Validation Fails**

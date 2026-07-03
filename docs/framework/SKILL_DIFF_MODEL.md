@@ -6,10 +6,9 @@ The Skill Diff Model defines how the framework determines how one skill differs
 from another without changing either skill.
 
 Skill diffs support evolution governance by making comparison explicit before a
-proposal is promoted, replaced, versioned, deprecated, or connected to a Process
-Tree. The model helps agents identify duplicate skills, compatible
+proposal is promoted, replaced, versioned, deprecated, or connected to a Process. The model helps agents identify duplicate skills, compatible
 enhancements, incompatible replacements, dependency changes, contract changes,
-and Process Tree impacts before canonical assets are modified.
+and Process impacts before canonical assets are modified.
 
 The diff model solves:
 
@@ -19,7 +18,7 @@ The diff model solves:
 - version impact analysis
 - promotion decision support
 - compatibility assessment
-- Process Tree impact review
+- Process impact review
 
 The Skill Diff Model is a governance model, not an algorithm. Future tooling may
 automate parts of the comparison, but the comparison categories and reporting
@@ -35,7 +34,7 @@ Skill diffs may compare:
 - outputs
 - dependencies
 - repository placement
-- Process Tree placement
+- Process placement
 - lifecycle state
 - version
 
@@ -55,7 +54,7 @@ it must not rewrite or improve prompt content.
 
 Meaning: compared assets have no material differences in governed fields.
 
-Impact: no version, promotion, repository, lifecycle, or Process Tree change is
+Impact: no version, promotion, repository, lifecycle, or Process change is
 required.
 
 Risk level: none.
@@ -82,7 +81,7 @@ Risk level: low.
 
 ### Dependency Change
 
-Meaning: referenced skills, workflows, schemas, Process Tree nodes, adapters, or
+Meaning: referenced skills, workflows, schemas, Process nodes, adapters, or
 external dependencies changed.
 
 Impact: validate dependency existence, compatibility, and downstream consumers.
@@ -95,7 +94,7 @@ Risk level: medium.
 Meaning: the skill's capability family, purpose, responsibility boundary, or
 domain coverage changed.
 
-Impact: reassess repository placement, registry capability, Process Tree fit,
+Impact: reassess repository placement, registry capability, Process fit,
 and duplicate or replacement risk.
 
 Risk level: medium to high.
@@ -105,7 +104,7 @@ Risk level: medium to high.
 Meaning: skill inputs, outputs, required artifacts, expected artifacts, or
 completion conditions changed.
 
-Impact: validate every known consumer, Process Tree node, and workflow that
+Impact: validate every known consumer, Process node, and workflow that
 depends on the contract.
 
 Risk level: high.
@@ -116,16 +115,16 @@ Meaning: the skill moves between folders, capability groups, proposal storage,
 or canonical storage.
 
 Impact: update registry location, references, documentation links, and any
-Process Tree references that rely on repository path.
+Process references that rely on repository path.
 
 Risk level: medium.
 
-### Process Tree Change
+### Process Change
 
-Meaning: the skill's relationship to Process Tree nodes, branches, artifact
+Meaning: the skill's relationship to Process nodes, branches, artifact
 flow, execution order, or approval gates changed.
 
-Impact: perform Process Tree impact review before promotion or canonical
+Impact: perform Process impact review before promotion or canonical
 reference changes.
 
 Risk level: high.
@@ -148,7 +147,7 @@ flow, changes execution order incompatibly, or makes a previous skill behavior
 unavailable.
 
 Impact: major version impact, explicit promotion review, migration guidance,
-replacement or deprecation planning, and Process Tree approval are required.
+replacement or deprecation planning, and Process approval are required.
 
 Risk level: critical.
 
@@ -164,7 +163,7 @@ registry entry and record that no action is required.
 ### Equivalent
 
 Meaning: differences exist but do not change capability, contract, dependencies,
-or Process Tree behavior.
+or Process behavior.
 
 Expected behavior: prefer documentation, metadata, or patch-level update paths
 over creating a new skill.
@@ -175,7 +174,7 @@ Meaning: the compared asset adds useful capability while preserving existing
 contract compatibility.
 
 Expected behavior: consider minor version impact and promotion review focused on
-compatibility, dependency, and Process Tree impact.
+compatibility, dependency, and Process impact.
 
 ### Variant
 
@@ -190,7 +189,7 @@ clear repository or registry distinction before promotion.
 Meaning: the compared asset is intended to supersede another skill.
 
 Expected behavior: require replacement approval, migration guidance,
-deprecation planning, registry update, and Process Tree review.
+deprecation planning, registry update, and Process review.
 
 ### Duplicate
 
@@ -203,7 +202,7 @@ governance reviewer approves merge, replacement, or variant treatment.
 ### Incompatible
 
 Meaning: the compared asset conflicts with the existing skill contract,
-capability boundary, Process Tree role, dependencies, governance rules, or
+capability boundary, Process role, dependencies, governance rules, or
 prompt fidelity requirements.
 
 Expected behavior: block promotion until incompatibility is resolved, or reject
@@ -217,7 +216,7 @@ Major version impact applies when:
 
 - Breaking Change occurs
 - Contract Change breaks existing consumers
-- Process Tree Change breaks execution order or artifact flow
+- Process Change breaks execution order or artifact flow
 - Capability Change changes the skill's core responsibility
 - Replacement changes the expected canonical skill for existing consumers
 
@@ -226,7 +225,7 @@ Minor version impact applies when:
 - Enhancement preserves compatibility
 - Dependency Change adds compatible optional dependencies
 - Capability Change expands scope without breaking existing use
-- Process Tree Change adds compatible placement or optional branch support
+- Process Change adds compatible placement or optional branch support
 - Lifecycle Change promotes a validated proposal into canonical use
 
 Patch version impact applies when:
@@ -253,10 +252,10 @@ Diff categories affect promotion review as follows:
 - Capability Change: promotion requires capability classification, duplicate
   review, and registry placement review.
 - Contract Change: promotion requires compatibility, consumer, workflow, and
-  Process Tree review.
+  Process review.
 - Repository Placement Change: promotion requires repository placement approval
   and registry update.
-- Process Tree Change: promotion requires Process Tree impact approval.
+- Process Change: promotion requires Process impact approval.
 - Lifecycle Change: promotion requires lifecycle transition validation and
   registry state update.
 - Breaking Change: promotion requires explicit approval, migration guidance,
@@ -264,9 +263,9 @@ Diff categories affect promotion review as follows:
   applicable.
 
 Promotion decisions must include the diff category, similarity outcome, version
-impact, Process Tree impact, and recommendation.
+impact, Process impact, and recommendation.
 
-## Process Tree Impact Rules
+## Process Impact Rules
 
 Diff analysis must evaluate how a change affects:
 
@@ -276,7 +275,7 @@ Diff analysis must evaluate how a change affects:
 - execution order
 - approval gates
 
-A Process Tree impact exists when a skill change:
+A Process impact exists when a skill change:
 
 - adds, removes, or replaces a node relationship
 - changes consumed artifacts
@@ -287,8 +286,8 @@ A Process Tree impact exists when a skill change:
 - changes human approval gates
 - changes downstream consumers
 
-Any Process Tree Change, Contract Change, Capability Change, Dependency Change,
-Replacement, or Breaking Change requires Process Tree review before promotion.
+Any Process Change, Contract Change, Capability Change, Dependency Change,
+Replacement, or Breaking Change requires Process review before promotion.
 
 ## Prompt Fidelity Rules
 
@@ -297,7 +296,7 @@ The Skill Diff Model may compare:
 - metadata
 - contracts
 - dependencies
-- Process Tree placement
+- Process placement
 
 The Skill Diff Model may not:
 
@@ -324,7 +323,7 @@ A Skill Diff Report must include:
 - diff category
 - similarity outcome
 - version impact
-- Process Tree impact
+- Process impact
 - promotion impact
 - recommendation
 

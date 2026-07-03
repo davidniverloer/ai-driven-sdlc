@@ -3,7 +3,7 @@
 Use this template when creating a Skill Proposal under `proposals/skills/`.
 
 The package structure must preserve source prompts verbatim and keep all derived
-classification, repository placement, Process Tree impact, and approval material
+classification, repository placement, Process impact, and approval material
 outside the source originals.
 
 ## Package Structure
@@ -13,7 +13,7 @@ outside the source originals.
   proposal.yaml
   classification.md
   repository-placement.md
-  process-tree-impact.md
+  process-impact.md
   approval-checklist.md
   source/
     README.md

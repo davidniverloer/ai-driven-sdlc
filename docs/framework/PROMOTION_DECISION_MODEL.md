@@ -12,7 +12,7 @@ Promotion decisions consume:
 - validation report
 - lifecycle state
 - repository placement report
-- Process Tree impact report
+- Process impact report
 - approval checklist
 - compatibility assessment
 - governance review
@@ -46,7 +46,7 @@ Every promotion recommendation should include:
 
 ## Repository Placement
 
-## Process Tree Impact
+## Process Impact
 
 ## Compatibility Impact
 
@@ -86,7 +86,7 @@ Every promotion decision must be traceable to:
 - decision date
 - lifecycle transition
 - affected canonical assets
-- affected Process Tree nodes
+- affected Process nodes
 - repository placement
 - unresolved warnings or blockers
 

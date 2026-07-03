@@ -11,7 +11,7 @@ is part of the Skill Evolution Engine and implements the intake path from raw
 expertise to reviewable proposal.
 
 The compiler does not implement skills. It does not modify approved skills,
-approved workflows, or canonical Process Trees. Its responsibility is to
+approved workflows, or canonical Processes. Its responsibility is to
 classify, map, package, validate, and propose while preserving source prompts
 exactly.
 
@@ -34,13 +34,13 @@ Skill Intake Mode means the agent must:
 - classify the protocol type
 - classify the target capability
 - map proposed repository placement
-- map Process Tree impact
+- map Process impact
 - perform similarity analysis
 - generate a proposal package
 - validate the proposal against governance
 
 Skill Intake Mode does not authorize direct changes to approved skills,
-approved workflows, or canonical Process Trees.
+approved workflows, or canonical Processes.
 
 ## Accepted Inputs
 
@@ -65,7 +65,7 @@ Capability Classification
 ↓
 Repository Mapping
 ↓
-Process Tree Mapping
+Process Mapping
 ↓
 Similarity Analysis
 ↓
@@ -127,9 +127,9 @@ documented in `repository-placement.md`.
 Repository mapping is a proposal step. It must not create or modify canonical
 assets directly.
 
-## Process Tree Mapping
+## Process Mapping
 
-Process Tree mapping determines how the proposed asset relates to the execution
+Process mapping determines how the proposed asset relates to the execution
 model.
 
 The compiler must:
@@ -142,9 +142,9 @@ The compiler must:
 - identify approval gate impact
 - identify execution impact
 
-Process Tree mapping must be documented in `process-tree-impact.md`.
+Process mapping must be documented in `process-impact.md`.
 
-Canonical Process Trees must not be modified directly during intake. If changes
+Canonical Processes must not be modified directly during intake. If changes
 are required, the compiler must record the proposed impact and required approval.
 
 ## Similarity Analysis
@@ -176,7 +176,7 @@ For skill intake, the compiler must produce:
 proposal.yaml
 classification.md
 repository-placement.md
-process-tree-impact.md
+process-impact.md
 approval-checklist.md
 source/
 ```
@@ -215,7 +215,7 @@ Proposal generation must fail when:
 - protocol type is unsupported
 - classification is too ambiguous to package responsibly
 - repository placement conflicts with an existing asset
-- Process Tree placement conflicts with execution order or artifact flow
+- Process placement conflicts with execution order or artifact flow
 - prompt fidelity cannot be verified
 - required proposal package artifacts cannot be produced
 - governance validation fails

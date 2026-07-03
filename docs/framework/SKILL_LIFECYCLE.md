@@ -47,7 +47,7 @@ Allowed modifications: reviewers may request clarifications, metadata updates,
 and mapping updates. Source prompts must not be rewritten.
 
 Required validations: proposal package completeness, protocol classification,
-capability classification, repository placement, and Process Tree impact.
+capability classification, repository placement, and Process impact.
 
 Transition conditions: may move to Validated when required validations pass. May
 move to Rejected when review determines the proposal should not continue.
@@ -62,7 +62,7 @@ Allowed modifications: only validation evidence, review notes, approval records,
 and promotion readiness updates.
 
 Required validations: Skill Intake Validation, Skill Proposal Validation, Process
-Tree Integration Validation, and Promotion Readiness Validation.
+Process Integration Validation, and Promotion Readiness Validation.
 
 Transition conditions: may move to Approved when governance approval is granted.
 May move to Rejected if validation or review uncovers non-remediated blockers.
@@ -106,7 +106,7 @@ Allowed location: `skills/<capability>/<skill-name>/`.
 Allowed modifications: immutable by default. Changes must enter as new
 proposals unless explicit human authorization allows direct modification.
 
-Required validations: canonical asset validation, Process Tree reference
+Required validations: canonical asset validation, Process reference
 validation, and registry validation once the registry exists.
 
 Transition conditions: may move to Deprecated when replacement, retirement, or
@@ -121,13 +121,13 @@ Allowed location: canonical skill location plus deprecation metadata or registry
 reference.
 
 Allowed modifications: deprecation notices, replacement references, migration
-guidance, and Process Tree updates.
+guidance, and Process updates.
 
 Required validations: replacement reference validation when applicable, Process
-Tree reference review, and documentation consistency checks.
+Process reference review, and documentation consistency checks.
 
 Transition conditions: may move to Archived when it is no longer active in any
-Process Tree or dependency path and preservation requirements are satisfied.
+Process or dependency path and preservation requirements are satisfied.
 
 ### Archived
 
@@ -139,7 +139,7 @@ reference. The archive location must be defined before archival is performed.
 Allowed modifications: archival metadata only.
 
 Required validations: source lineage preservation, deprecation history,
-replacement references, and Process Tree detachment.
+replacement references, and Process detachment.
 
 Transition conditions: terminal state unless explicitly restored through a new
 proposal.
@@ -190,7 +190,7 @@ Restoration or revival from Deprecated or Archived requires a new proposal.
 - canonical skills are immutable by default
 - changes to canonical skills must enter as proposals
 - prompt source artifacts remain immutable
-- canonical skills must maintain Process Tree and registry references when
+- canonical skills must maintain Process and registry references when
   applicable
 - canonical lifecycle state must be reflected in the Skill Registry once the
   registry exists
@@ -201,7 +201,7 @@ A skill may be deprecated when:
 
 - it is replaced by a better canonical skill
 - its capability is no longer recommended
-- its Process Tree role changes
+- its Process role changes
 - it becomes incompatible with current governance or schema expectations
 - it is superseded by a workflow or broader capability
 
@@ -210,12 +210,12 @@ Deprecation must document:
 - deprecation reason
 - replacement skill or explicit statement that none exists
 - migration guidance
-- affected Process Tree nodes
+- affected Process nodes
 - affected workflows or proposals
 - date and approval reference
 
-Process Tree references must be updated or marked deprecated. A deprecated skill
-must not remain silently active in a canonical Process Tree.
+Process references must be updated or marked deprecated. A deprecated skill
+must not remain silently active in a canonical Process.
 
 The Skill Registry must be updated when a skill enters Deprecated state.
 
@@ -224,7 +224,7 @@ The Skill Registry must be updated when a skill enters Deprecated state.
 A skill may be archived when:
 
 - it is deprecated
-- no active canonical Process Tree depends on it
+- no active canonical Process depends on it
 - replacement or removal guidance is documented
 - source lineage and decision history are preserved
 
@@ -235,7 +235,7 @@ Archived skills must preserve:
 - deprecation record
 - replacement guidance
 - validation and approval history
-- Process Tree removal or detachment evidence
+- Process removal or detachment evidence
 
 The Skill Registry must retain archived skill references so archived skills
 remain discoverable.
@@ -247,7 +247,7 @@ A proposal may be rejected when:
 - prompt fidelity cannot be verified
 - protocol classification is invalid or unsupported
 - repository placement conflicts cannot be resolved
-- Process Tree placement is invalid
+- Process placement is invalid
 - proposal duplicates an existing asset without useful differentiation
 - governance validation fails
 - approval is denied

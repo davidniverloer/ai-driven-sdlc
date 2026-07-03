@@ -89,24 +89,25 @@ Assets must not move from proposal or creation directly to publication when they
 have unresolved references, missing contracts, undocumented dependencies, or
 unreviewed compatibility impact.
 
-## Process Tree Governance
+## Process Governance
 
-The Process Tree is part of the Repository Operating System.
-`process-trees/default.md` is the active default canonical Process Tree for
+The Process is part of the Repository Operating System.
+`processes/default.md` is the active default canonical Process for
 ai-driven-sdlc capabilities. It defines ordered execution, node contracts,
 artifact flow, repository placement, and human approval gates.
 
+`docs/framework/PROCESS_MODEL.md` defines the current process model.
 `docs/framework/PROCESS_TREE.md` is retained only as a legacy compatibility
-pointer when present.
+pointer.
 
-Agents must check `process-trees/default.md` before creating or modifying skills
-or workflows. Agents must update the relevant Process Tree when execution order,
+Agents must check `processes/default.md` before creating or modifying skills
+or workflows. Agents must update the relevant Process when execution order,
 repository placement, dependencies, artifacts, or human approval gates change.
 The policy for deciding when updates are required is defined in
-`docs/execution/PROCESS_TREE_POLICY.md`.
+`docs/execution/PROCESS_POLICY.md`.
 
-Process Tree changes are governance changes. They must be traceable through
-command history and validated through Process Tree Integrity checks in
+Process changes are governance changes. They must be traceable through
+command history and validated through Process Integrity checks in
 `docs/execution/VALIDATION_PROTOCOL.md`.
 
 ## Prompt Immutability Governance

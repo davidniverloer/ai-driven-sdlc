@@ -53,7 +53,7 @@ Required dimensions for skill comparison:
 - capability similarity
 - contract similarity
 - dependency similarity
-- Process Tree similarity
+- Process similarity
 - artifact similarity
 - repository placement similarity
 - lifecycle similarity
@@ -89,7 +89,7 @@ Include:
 - duplicate risk
 - replacement risk
 - repository placement risk
-- Process Tree risk
+- Process risk
 - prompt fidelity risk
 
 ## Recommendation
@@ -108,7 +108,7 @@ Recommended actions:
 - defer pending evidence
 
 The recommendation must identify required follow-up evidence, governance review,
-promotion impact, and Process Tree review.
+promotion impact, and Process review.
 
 ## Prompt Fidelity Requirement
 

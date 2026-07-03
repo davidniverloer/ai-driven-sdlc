@@ -27,7 +27,7 @@ The future template must support:
 - output contract sections
 - immutable source prompt placement
 - example input and output requirements
-- Process Tree relationship references
+- Process relationship references
 - repository mapping references
 - registry compatibility
 - lifecycle state tracking

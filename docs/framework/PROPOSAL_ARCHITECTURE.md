@@ -5,7 +5,7 @@
 Proposals exist because ai-driven-sdlc must evolve without destabilizing
 approved assets.
 
-Approved framework assets remain stable. New expertise, protocols, Process Tree
+Approved framework assets remain stable. New expertise, protocols, Process
 changes, schemas, adapters, workflows, and installation changes must not enter
 the framework directly. They first become proposals so they can be reviewed,
 validated, traced, and approved before promotion.
@@ -13,27 +13,27 @@ validated, traced, and approved before promotion.
 Proposal Architecture creates a controlled path from source material to
 canonical asset. It supports future automation by the Skill Evolution Engine
 while preserving human approval, validation, prompt immutability, and Process
-Tree governance.
+governance.
 
 ## Proposal Categories
 
 ### Skill Proposal
 
 A proposed new skill or change to a skill. Skill proposals must identify
-capability group, source material, repository placement, Process Tree impact,
+capability group, source material, repository placement, Process impact,
 similar existing skills, validation requirements, and promotion readiness.
 
 ### Workflow Proposal
 
 A proposed new workflow or workflow change. Workflow proposals must identify
 orchestration intent, referenced skills, artifact handoffs, dependency chains,
-approval gates, validation requirements, and Process Tree impact.
+approval gates, validation requirements, and Process impact.
 
-### Process Tree Proposal
+### Process Proposal
 
-A proposed new Process Tree or Process Tree change. Process Tree proposals must
+A proposed new Process or Process change. Process proposals must
 identify execution order, repository placement, artifacts, approval gates,
-affected canonical trees, and validation requirements.
+affected canonical processes, and validation requirements.
 
 ### Schema Proposal
 
@@ -103,7 +103,7 @@ initial mapping.
 
 **Proposal Reviewer**
 
-Reviews structure, consistency, compatibility, Process Tree impact, and
+Reviews structure, consistency, compatibility, Process impact, and
 validation evidence.
 
 **Proposal Approver**
@@ -124,7 +124,7 @@ Proposals may:
 - describe proposed assets
 - classify asset category and lifecycle state
 - map proposed repository placement
-- map Process Tree impact
+- map Process impact
 - identify validation requirements
 - document compatibility impact
 - prepare promotion packages
@@ -135,7 +135,7 @@ Proposals may not:
 - bypass proposal review
 - bypass validation
 - bypass human approval when required
-- overwrite canonical Process Trees
+- overwrite canonical Processes
 - rewrite source prompts or protocols
 - publish themselves as canonical assets
 
@@ -152,7 +152,7 @@ Category-specific intake zones:
 ```text
 proposals/skills/
 proposals/workflows/
-proposals/process-trees/
+proposals/processes/
 proposals/schemas/
 proposals/adapters/
 proposals/installers/
@@ -177,7 +177,7 @@ Examples:
 ```text
 skill-ux-friction-analysis-v0.1.0
 workflow-governed-implementation-v0.1.0
-process-tree-ux-first-v0.1.0
+process-ux-first-v0.1.0
 schema-skill-manifest-v0.1.0
 adapter-codex-v0.1.0
 installer-core-v0.1.0
@@ -195,7 +195,7 @@ A proposal may become canonical only when:
 - ownership is documented
 - source material is preserved
 - repository placement is defined
-- Process Tree impact is assessed
+- Process impact is assessed
 - compatibility impact is assessed
 - breaking-change impact is assessed
 - deprecation impact is assessed when applicable

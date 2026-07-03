@@ -1,13 +1,15 @@
-# Legacy Process Tree Location
+# Legacy Process Tree Model
 
-The canonical Process Tree has moved to:
+This file is retained as a compatibility pointer.
 
-process-trees/default.md
+The current process model is:
 
-This file is retained only as a compatibility pointer.
+```text
+docs/framework/PROCESS_MODEL.md
+```
 
-Future agents must use:
+The canonical default process is:
 
-process-trees/default.md
-
-as the canonical default Process Tree.
+```text
+processes/default.md
+```

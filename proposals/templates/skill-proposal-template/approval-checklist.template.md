@@ -18,9 +18,9 @@
 - [ ] Placement rationale is present.
 - [ ] Affected assets are listed.
 
-## Process Tree Verification
+## Process Verification
 
-- [ ] Process Tree impact report is complete.
+- [ ] Process impact report is complete.
 - [ ] New or affected nodes are identified.
 - [ ] Artifact changes are identified.
 - [ ] Approval gate changes are identified.

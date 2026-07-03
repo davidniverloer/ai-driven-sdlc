@@ -54,7 +54,7 @@ Ask the agent to read:
 .ai-sdlc/guides/FIRST_RUN.md
 .ai-sdlc/commands/manifest.md
 .ai-sdlc/guides/SKILL_CREATE_COMMAND.md
-.ai-sdlc/process-trees/default.md
+.ai-sdlc/processes/default.md
 ```
 
 ## 3. Submit Your First Skill Protocol
@@ -92,7 +92,7 @@ Review:
 
 - `classification.md`
 - `repository-placement.md`
-- `process-tree-impact.md`
+- `process-impact.md`
 - `similarity-analysis.md`
 - `validation-report.md`
 - `source/`
@@ -107,7 +107,7 @@ Promotion is separate from proposal generation.
 Only promote a skill when:
 
 - the proposal is valid
-- the Process Tree placement is clear
+- the Process placement is clear
 - source prompts are preserved
 - the skill does not duplicate an existing canonical skill
 - a human reviewer approves the promotion
@@ -130,7 +130,7 @@ Then ask the agent to generate a proposal package and stop before promotion.
 ai-driven-sdlc does not automatically change your application code.
 
 It does not silently rewrite prompts, promote skills, or update canonical
-Process Trees.
+Processes.
 
 It is a planning and governance layer first. Automation can be added later once
 the contracts are stable.

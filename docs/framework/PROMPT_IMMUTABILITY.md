@@ -56,7 +56,7 @@ The framework may:
 - classify submitted prompts
 - annotate submitted prompts externally
 - tag submitted prompts
-- map submitted prompts to repository or Process Tree locations
+- map submitted prompts to repository or Process locations
 - package submitted prompts into proposals
 - validate submitted prompts against governance
 - version submitted prompts

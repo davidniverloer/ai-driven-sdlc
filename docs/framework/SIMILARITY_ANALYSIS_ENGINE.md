@@ -8,7 +8,7 @@ existing framework assets before promotion is considered.
 It exists to determine whether incoming work represents a new skill, an
 enhancement, a duplicate, a replacement, a workflow component, or an
 incompatible asset. This prevents duplicate canonical skills, unsafe
-replacements, hidden capability overlap, repository conflicts, and Process Tree
+replacements, hidden capability overlap, repository conflicts, and Process
 conflicts.
 
 The engine supports governance by making comparison outcomes explicit,
@@ -45,9 +45,9 @@ skill responsibility, workflow responsibility, or framework model boundary.
 Identify when a proposed asset maps to an existing repository path, registry
 entry, proposal package, or asset ownership area.
 
-### Process Tree Overlap Detection
+### Process Overlap Detection
 
-Identify when a proposed asset affects existing Process Tree nodes, branches,
+Identify when a proposed asset affects existing Process nodes, branches,
 artifact flow, execution order, or approval gates.
 
 ## Compared Asset Types
@@ -56,7 +56,7 @@ artifact flow, execution order, or approval gates.
 
 Skills are the primary comparison target. Analysis should compare capability,
 contract, inputs, outputs, dependencies, repository placement, lifecycle state,
-and Process Tree relationships.
+and Process relationships.
 
 ### Workflows
 
@@ -64,9 +64,9 @@ Workflow comparison should identify overlapping orchestration, duplicated
 execution paths, reused skill sequences, artifact handoffs, recovery behavior,
 and approval gates.
 
-### Process Trees
+### Processes
 
-Process Tree comparison should identify overlapping nodes, branches, artifact
+Process comparison should identify overlapping nodes, branches, artifact
 flow, execution order, terminal outcomes, and human gates.
 
 ### Schemas
@@ -95,12 +95,12 @@ conditions, and compatibility boundaries.
 
 ### Dependency Similarity
 
-Compares referenced skills, workflows, schemas, Process Tree nodes, adapters,
+Compares referenced skills, workflows, schemas, Process nodes, adapters,
 external tools, and governance documents.
 
-### Process Tree Similarity
+### Process Similarity
 
-Compares Process Tree nodes, branches, execution paths, artifact flow,
+Compares Process nodes, branches, execution paths, artifact flow,
 execution order, terminal classification, and approval gates.
 
 ### Artifact Similarity
@@ -136,7 +136,7 @@ blocked as unnecessary.
 ### Equivalent
 
 Meaning: differences exist but do not change capability, contract,
-dependencies, repository placement, or Process Tree behavior.
+dependencies, repository placement, or Process behavior.
 
 Risk level: low.
 
@@ -149,7 +149,7 @@ patch-level update or proposal merge may be appropriate.
 ### Enhancement
 
 Meaning: the proposal extends an existing asset while preserving compatibility
-with current consumers and Process Tree relationships.
+with current consumers and Process relationships.
 
 Risk level: medium.
 
@@ -166,7 +166,7 @@ context, constraint set, target use, or capability boundary.
 Risk level: medium.
 
 Governance impact: requires clear rationale for separate existence, repository
-placement review, and Process Tree relationship review.
+placement review, and Process relationship review.
 
 Promotion implications: may proceed only when the distinction is explicit and
 traceable.
@@ -179,7 +179,7 @@ Risk level: high.
 
 Governance impact: requires deprecation planning, lifecycle transition review,
 migration guidance, registry update planning, Skill Diff analysis, and Process
-Tree impact review.
+impact review.
 
 Promotion implications: promotion requires explicit replacement approval.
 
@@ -199,7 +199,7 @@ unless governance approves a different outcome.
 ### Incompatible
 
 Meaning: the proposal conflicts with existing contracts, dependencies,
-capability ownership, repository placement, Process Tree behavior, lifecycle
+capability ownership, repository placement, Process behavior, lifecycle
 state, or prompt fidelity requirements.
 
 Risk level: critical.
@@ -217,7 +217,7 @@ A proposal should be considered a duplicate when it:
   existing skill
 - produces the same outputs for the same inputs without a distinct governed use
   case
-- maps to the same repository ownership and Process Tree role without a
+- maps to the same repository ownership and Process role without a
   replacement or enhancement rationale
 - duplicates workflow orchestration without a distinct execution path
 - repeats an existing schema, adapter, or governance role without a new
@@ -232,7 +232,7 @@ A proposal should be considered an enhancement when it:
 - adds compatible behavior to an existing asset
 - preserves existing inputs and outputs
 - preserves existing artifact flow
-- preserves existing Process Tree execution order unless a compatible extension
+- preserves existing Process execution order unless a compatible extension
   is proposed
 - does not require consumers to migrate immediately
 - has a clear relationship to an existing canonical asset
@@ -246,7 +246,7 @@ A proposal should be considered a replacement when it:
 
 - explicitly claims to supersede an existing canonical skill
 - removes or changes the expected contract of an existing skill
-- changes the canonical Process Tree role of an existing skill
+- changes the canonical Process role of an existing skill
 - introduces a preferred capability that makes the existing asset deprecated
 - requires migration from an existing asset
 
@@ -257,7 +257,7 @@ Replacement has lifecycle implications: the proposed asset must pass proposal,
 validation, promotion, registry, and lifecycle governance before becoming
 canonical.
 
-Replacement has Process Tree implications: affected nodes, branches, artifact
+Replacement has Process implications: affected nodes, branches, artifact
 flow, execution order, and approval gates must be reviewed before promotion.
 
 ## Incompatibility Rules
@@ -266,7 +266,7 @@ A proposal is incompatible when it:
 
 - violates prompt fidelity
 - conflicts with an existing canonical contract
-- changes artifact flow without Process Tree approval
+- changes artifact flow without Process approval
 - depends on missing or prohibited assets
 - introduces vendor lock-in into core assets
 - maps to an owned repository location without approval
@@ -302,7 +302,7 @@ The Similarity Analysis Engine may compare:
 - metadata
 - contracts
 - dependencies
-- Process Tree relationships
+- Process relationships
 
 The engine may not:
 

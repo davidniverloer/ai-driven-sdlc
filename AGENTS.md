@@ -138,35 +138,36 @@ governance:
 - documentation assets: framework model documents, README files, and asset-local
   documentation
 
-## Process Tree Governance
+## Process Governance
 
-ai-driven-sdlc supports multiple Process Trees. Process Trees live under
-`process-trees/` and are Markdown source-of-truth execution maps.
+ai-driven-sdlc supports multiple Processes. Processes live under
+`processes/` and are Markdown source-of-truth execution maps.
 
-`process-trees/default.md` is the active default canonical Process Tree.
-`docs/framework/PROCESS_TREE.md` is legacy only if present.
+`processes/default.md` is the active default canonical Process.
+`process-trees/default.md` is a legacy compatibility pointer.
+`docs/framework/PROCESS_MODEL.md` is the current process model.
 
-Agents must inspect `process-trees/default.md` before creating or modifying
-skills or workflows. They must update the relevant Process Tree whenever
+Agents must inspect `processes/default.md` before creating or modifying
+skills or workflows. They must update the relevant Process whenever
 execution order, repository placement, artifact dependencies, or approval gates
 change.
 
 Approved skills must not be modified directly unless explicitly authorized. New
-skills must be placed into the Process Tree as proposed nodes or canonical nodes
+skills must be placed into the Process as proposed nodes or canonical nodes
 according to governance rules.
 
-Agents must use `process-trees/templates/process-tree-template.md` when creating
-new Process Trees. Agents must update `process-trees/README.md` when adding a
-tree. Agents must update `README.md` when adding a canonical or recommended
-tree.
+Agents must use `processes/templates/process-template.md` when creating
+new Processes. Agents must update `processes/README.md` when adding a
+process. Agents must update `README.md` when adding a canonical or recommended
+process.
 
-Agents must not overwrite canonical Process Trees without explicit approval.
-New Process Trees must be created as separate files under `process-trees/`.
-Process Tree changes must be recorded in command history.
+Agents must not overwrite canonical Processes without explicit approval.
+New Processes must be created as separate files under `processes/`.
+Process changes must be recorded in command history.
 
-Future agents must follow `docs/execution/PROCESS_TREE_POLICY.md` to decide when
-Process Tree updates are required, how to record them, and how to report Process
-Tree impact.
+Future agents must follow `docs/execution/PROCESS_POLICY.md` to decide when
+Process updates are required, how to record them, and how to report Process
+impact.
 
 ## Skill Evolution Engine
 
@@ -175,7 +176,7 @@ skill proposals. Its architecture is defined in
 `docs/framework/SKILL_EVOLUTION_ENGINE.md`.
 
 The engine is responsible for intake, classification, repository mapping,
-Process Tree mapping, proposal generation, proposal validation, and promotion
+Process mapping, proposal generation, proposal validation, and promotion
 preparation. It does not implement skills, rewrite prompts, or modify approved
 skills.
 
@@ -183,8 +184,8 @@ Submitted prompts are source artifacts. Source prompts must be preserved
 verbatim. Agents may classify, annotate, map, and package submitted prompts.
 Agents may not rewrite, optimize, improve, or reinterpret submitted prompts.
 
-The Skill Evolution Engine must remain Process Tree aware. New skill proposals
-must identify where they belong in the relevant Process Tree and whether they
+The Skill Evolution Engine must remain Process aware. New skill proposals
+must identify where they belong in the relevant Process and whether they
 affect execution order, repository placement, artifact dependencies, or approval
 gates.
 
@@ -202,7 +203,7 @@ validate, and propose submitted prompts and protocols, but it must preserve
 prompt fidelity.
 
 Approved assets remain immutable. The compiler must not directly modify approved
-skills, approved workflows, or canonical Process Trees.
+skills, approved workflows, or canonical Processes.
 
 ## Skill Intake Validation
 
@@ -225,7 +226,7 @@ Promotion never alters source prompts.
 
 The Skill Promotion Engine may evaluate readiness and recommend promotion, but
 it must not bypass validation, bypass approval, modify approved skills, or
-modify canonical Process Trees directly.
+modify canonical Processes directly.
 
 ## Skill Promotion Policy
 
@@ -243,7 +244,7 @@ Every skill must have a lifecycle state. Skill lifecycle governance is defined i
 
 Lifecycle transitions must be documented. Canonical skills are immutable by
 default. Deprecated skills must preserve history, replacement references when
-applicable, source lineage, validation evidence, and Process Tree reference
+applicable, source lineage, validation evidence, and Process reference
 status.
 
 ## Canonical Skill Registry
@@ -300,7 +301,7 @@ All new framework contributions enter as proposals. Proposal architecture is
 defined in `docs/framework/PROPOSAL_ARCHITECTURE.md`, and proposal lifecycle is
 defined in `docs/framework/PROPOSAL_LIFECYCLE.md`.
 
-Approved assets remain immutable. New skills, workflows, Process Trees, schemas,
+Approved assets remain immutable. New skills, workflows, Processes, schemas,
 adapters, and installation assets must be proposed, validated, approved, and
 promoted before they become canonical.
 
@@ -313,12 +314,12 @@ assets through proposal work.
 Skill Diff governance is defined in `docs/framework/SKILL_DIFF_MODEL.md`.
 
 Diffs must preserve prompt fidelity. Agents may compare skill metadata,
-contracts, dependencies, repository placement, Process Tree placement, lifecycle
+contracts, dependencies, repository placement, Process placement, lifecycle
 state, and version, but must not rewrite, normalize, optimize, or reinterpret
 source prompts.
 
 Diffs must be traceable to compared assets, evidence, diff category, similarity
-outcome, version impact, promotion impact, Process Tree impact, and
+outcome, version impact, promotion impact, Process impact, and
 recommendation.
 
 Promotion review must classify diff impact before a proposal is promoted,
@@ -331,7 +332,7 @@ Repository Mapping governance is defined in
 
 Repository placement must be traceable. Placement recommendations must identify
 asset classification, capability, proposed path, rationale, collisions, Process
-Tree relationship, affected assets, and recommendation.
+relationship, affected assets, and recommendation.
 
 Repository placement must be deterministic. Agents must use documented asset
 categories and capability locations instead of inventing paths or silently
@@ -341,8 +342,8 @@ Repository placement must not overwrite approved assets. Collision findings must
 be reported and resolved through proposal, promotion, or protected operation
 governance.
 
-Repository placement must align with Process Trees. A proposed location is not
-sufficient for promotion unless the related Process Tree nodes, branches,
+Repository placement must align with Processes. A proposed location is not
+sufficient for promotion unless the related Process nodes, branches,
 execution paths, or terminal classification are documented.
 
 ## Similarity Analysis Governance
@@ -354,12 +355,12 @@ Similarity analysis is mandatory before promotion. Proposed assets must be
 compared against existing framework assets when promotion is being considered.
 
 Duplicate detection is mandatory. Agents must not promote a proposed skill,
-workflow, Process Tree, schema, or adapter without checking whether it
+workflow, Process, schema, or adapter without checking whether it
 duplicates, enhances, replaces, or conflicts with an existing asset.
 
 Prompt fidelity must be preserved. Similarity analysis may compare metadata,
 contracts, dependencies, repository placement, lifecycle state, artifacts, and
-Process Tree relationships, but it must not rewrite, normalize, optimize, or
+Process relationships, but it must not rewrite, normalize, optimize, or
 reinterpret source prompts.
 
 Similarity analysis must be traceable to compared assets, comparison
@@ -376,7 +377,7 @@ normalizing, or reinterpreting them.
 
 Package structure is mandatory. Canonical skills must include required package
 files, required metadata, output contract expectations, source prompt
-preservation, examples, repository placement, Process Tree references,
+preservation, examples, repository placement, Process references,
 lifecycle state, dependencies, and source proposal traceability.
 
 ## Skill Creation Command
@@ -392,7 +393,7 @@ externally, map, package, and validate, but it must not rewrite, optimize,
 improve, reinterpret, paraphrase, or merge submitted prompts.
 
 The command must not create canonical skills, promote skills, modify approved
-skills, modify approved workflows, or modify canonical Process Trees.
+skills, modify approved workflows, or modify canonical Processes.
 
 ## Slash Command Governance
 
@@ -418,7 +419,7 @@ Every Skill Proposal must conform to the Skill Proposal Model defined in
 
 No Skill Proposal may bypass the required package structure. Skill Proposal
 packages must include proposal metadata, classification, repository placement,
-Process Tree impact, approval checklist, and immutable source prompt copies.
+Process impact, approval checklist, and immutable source prompt copies.
 
 ## Prohibited Actions
 
@@ -438,7 +439,7 @@ Agents must not:
 - combine unrelated asset-family changes into a single commit recommendation
 - rewrite, optimize, improve, or reinterpret submitted source prompts
 - use the Skill Evolution Engine to bypass proposal, validation, approval, or
-  Process Tree governance
+  Process governance
 - bypass proposal governance for new framework contributions
 - bypass the Skill Proposal package structure for proposed skills
 

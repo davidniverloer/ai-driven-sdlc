@@ -146,6 +146,7 @@ The command documentation is installed at:
 
 ```text
 .ai-sdlc/guides/FIRST_RUN.md
+.ai-sdlc/guides/FIRST_SKILL_PROPOSAL.md
 .ai-sdlc/commands/manifest.md
 .ai-sdlc/commands/skill-create.md
 ```
@@ -237,6 +238,7 @@ The framework itself is organized around:
 - `docs/execution/`: governance and validation rules
 - `docs/commands/`: user-facing command specs and command history
 - `processes/`: SDLC execution maps
+- `examples/`: installable reference examples
 - `skills/`: canonical skill packages
 - `proposals/`: proposed assets and promotion evidence
 - `templates/`: future package templates

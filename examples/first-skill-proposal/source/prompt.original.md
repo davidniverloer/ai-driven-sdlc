@@ -1,0 +1,1 @@
+Act as a planning reviewer for a small software project. Read a short project idea and produce five clarifying questions, three likely risks, and one recommended next planning artifact. Do not implement code.

@@ -54,6 +54,7 @@ Ask the agent to read:
 .ai-sdlc/guides/FIRST_RUN.md
 .ai-sdlc/commands/manifest.md
 .ai-sdlc/guides/SKILL_CREATE_COMMAND.md
+.ai-sdlc/guides/FIRST_SKILL_PROPOSAL.md
 .ai-sdlc/processes/default.md
 ```
 

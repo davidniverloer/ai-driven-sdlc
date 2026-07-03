@@ -857,3 +857,36 @@ Document uninstall usage as:
 Every installed repository gets a local uninstall entry point. The uninstaller
 still defaults to the current directory, requires `.ai-sdlc/manifest.txt`, and
 moves `.ai-sdlc/` to a timestamped backup instead of deleting it.
+
+## ADR-0031: Add Installed Command Manifest
+
+Date: 2026-07-03
+Status: Accepted
+
+### Context
+
+Installed repositories need a clear command discovery entry point. The command
+documentation index existed, but it explicitly avoided acting as an installed
+`.ai-sdlc/` command manifest before installation behavior was defined.
+
+The installer now copies `docs/commands/` into `.ai-sdlc/commands/`, so a
+lightweight installed manifest can be introduced without adding runtime
+automation or schema-backed registry behavior.
+
+### Decision
+
+Add `docs/commands/manifest.md` as the source command manifest installed to:
+
+```text
+.ai-sdlc/commands/manifest.md
+```
+
+The manifest lists supported commands, activation rules, specifications, safety
+boundaries, and required references for agents.
+
+### Consequences
+
+Installed repositories now have a first command discovery file. The manifest is
+Markdown only and remains agent-readable, not machine-readable. Future command
+metadata schemas can evolve separately after command manifest schema governance
+is defined.

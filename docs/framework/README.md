@@ -83,6 +83,8 @@ how those assets are changed, validated, and traced over time.
   command for compiling a submitted protocol into a skill proposal.
 - `../guides/SKILL_CREATION_COMMAND_GUIDE.md` explains the Skill Creation
   Command for contributors.
+- `../guides/GETTING_STARTED.md` explains installation and first use for
+  non-expert users.
 
 ## Relationship Between Documents
 

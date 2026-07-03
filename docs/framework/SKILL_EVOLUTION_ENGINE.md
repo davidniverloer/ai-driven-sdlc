@@ -7,14 +7,14 @@ how new expertise enters ai-driven-sdlc.
 
 It accepts source prompts and source protocols as preserved artifacts, classifies
 them, determines where they belong in the repository, determines where they
-belong in Process Trees, generates skill proposals, validates those proposals,
+belong in Processes, generates skill proposals, validates those proposals,
 and prepares approved proposals for promotion.
 
 It exists because ai-driven-sdlc must evolve safely without allowing new prompts,
 protocols, or agent output to overwrite approved framework assets. The engine
 solves the problem of turning raw expertise into governed, traceable skill
 proposals while preserving source material and protecting canonical skills,
-workflows, and Process Trees.
+workflows, and Processes.
 
 The Skill Evolution Engine does not implement skills. It does not rewrite
 prompts. It does not modify approved skills. It governs the path from source
@@ -31,16 +31,16 @@ records provenance.
 **Classification**
 
 Identify the likely capability group, asset type, lifecycle state, and
-relationship to existing skills, workflows, schemas, and Process Trees.
+relationship to existing skills, workflows, schemas, and Processes.
 
 **Repository Mapping**
 
 Determine the proposed repository location for a skill proposal or related
 metadata without creating or modifying canonical skill assets directly.
 
-**Process Tree Mapping**
+**Process Mapping**
 
-Determine where the proposed skill would appear in one or more Process Trees,
+Determine where the proposed skill would appear in one or more Processes,
 including consumed artifacts, produced artifacts, predecessor nodes, successor
 nodes, and approval gates.
 
@@ -52,7 +52,7 @@ questions into a skill proposal.
 **Proposal Validation**
 
 Validate the proposal against repository governance, asset evolution policy,
-Process Tree policy, validation protocol, and approved skill immutability.
+Process policy, validation protocol, and approved skill immutability.
 
 **Promotion Preparation**
 
@@ -87,13 +87,13 @@ must not modify them directly without explicit human authorization.
 **Proposal Metadata**
 
 Proposal metadata includes source references, classification, repository
-location, Process Tree mapping, similarity findings, compatibility assessment,
+location, Process mapping, similarity findings, compatibility assessment,
 validation evidence, approval status, and promotion readiness.
 
-**Process Tree Mappings**
+**Process Mappings**
 
-Process Tree mappings describe where proposed skills would appear in Process
-Trees, what artifacts they consume, what artifacts they produce, and which nodes
+Process mappings describe where proposed skills would appear in Process
+Processes, what artifacts they consume, what artifacts they produce, and which nodes
 or gates they affect.
 
 ## Core Components
@@ -128,7 +128,7 @@ Inputs:
 - intake summary
 - existing asset model
 - skill model
-- Process Tree context
+- Process context
 
 Outputs:
 
@@ -158,26 +158,26 @@ Outputs:
 - collision or conflict notes
 - ownership and dependency notes
 
-### Process Tree Integrator
+### Process Integrator
 
-Purpose: map the proposed skill to one or more Process Trees without modifying
-canonical Process Trees directly.
+Purpose: map the proposed skill to one or more Processes without modifying
+canonical Processes directly.
 
 Inputs:
 
 - proposed repository location
-- Process Tree files
+- Process files
 - proposed consumed artifacts
 - proposed produced artifacts
 - predecessor and successor candidates
 
 Outputs:
 
-- proposed Process Tree placement
-- affected Process Tree nodes
+- proposed Process placement
+- affected Process nodes
 - artifact-flow impact
 - approval-gate impact
-- Process Tree update recommendation
+- Process update recommendation
 
 ### Similarity Analyzer
 
@@ -190,7 +190,7 @@ Inputs:
 - proposed capability classification
 - existing skills
 - existing proposals
-- Process Tree mappings
+- Process mappings
 
 Outputs:
 
@@ -210,7 +210,7 @@ Inputs:
 - preserved source artifact
 - classification output
 - repository mapping
-- Process Tree mapping
+- Process mapping
 - similarity analysis
 - governance notes
 
@@ -233,7 +233,7 @@ Inputs:
 - proposal metadata
 - validation protocol
 - asset evolution policy
-- Process Tree policy
+- Process policy
 - current decisions and risks
 
 Outputs:
@@ -256,7 +256,7 @@ Inputs:
 - approval record
 - promotion checklist
 - target repository mapping
-- Process Tree update recommendation
+- Process update recommendation
 
 Outputs:
 
@@ -277,7 +277,7 @@ Classification
 ↓
 Repository Mapping
 ↓
-Process Tree Mapping
+Process Mapping
 ↓
 Proposal Generation
 ↓
@@ -310,10 +310,10 @@ New expertise enters the framework as a proposal before it can become a
 canonical skill. Proposals must carry source references, mappings, validation
 evidence, and approval status.
 
-**Process Tree Awareness**
+**Process Awareness**
 
-Every skill proposal must identify whether and where it affects Process Trees.
-Process Tree placement must be explicit and must not be inferred from repository
+Every skill proposal must identify whether and where it affects Processes.
+Process placement must be explicit and must not be inferred from repository
 convention alone.
 
 **Traceability**
@@ -335,7 +335,7 @@ The Skill Evolution Engine may:
 - classify source artifacts
 - annotate source artifacts without changing their text
 - map proposed assets to repository locations
-- map proposed skills to Process Trees
+- map proposed skills to Processes
 - identify similar or conflicting existing assets
 - generate skill proposals
 - validate proposals against governance
@@ -349,7 +349,7 @@ The Skill Evolution Engine may never, without explicit human authorization:
 - reinterpret prompts
 - modify approved skills directly
 - modify approved workflows directly
-- modify canonical Process Trees directly
+- modify canonical Processes directly
 
 The engine governs entry and promotion. It does not replace human approval, asset
-validation, Process Tree governance, or protected operation governance.
+validation, Process governance, or protected operation governance.

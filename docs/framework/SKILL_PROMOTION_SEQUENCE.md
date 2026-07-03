@@ -21,7 +21,7 @@ Canonical Registration
 **Proposal**
 
 A Skill Proposal package exists and contains required source, metadata,
-classification, repository placement, Process Tree impact, and approval
+classification, repository placement, Process impact, and approval
 checklist artifacts.
 
 **Validation**

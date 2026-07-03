@@ -13,7 +13,7 @@ From the target repository root, confirm these files exist:
 ```text
 .ai-sdlc/manifest.txt
 .ai-sdlc/commands/manifest.md
-.ai-sdlc/process-trees/default.md
+.ai-sdlc/processes/default.md
 .ai-sdlc/uninstall.sh
 ```
 
@@ -25,7 +25,7 @@ Ask the agent to read these files in order:
 
 ```text
 .ai-sdlc/commands/manifest.md
-.ai-sdlc/process-trees/default.md
+.ai-sdlc/processes/default.md
 .ai-sdlc/guides/SKILL_CREATE_COMMAND.md
 .ai-sdlc/framework/PROMPT_IMMUTABILITY.md
 .ai-sdlc/execution/VALIDATION_PROTOCOL.md
@@ -54,7 +54,7 @@ Do not start by asking the agent to:
 - implement application code
 - rewrite submitted prompts
 - promote a skill directly
-- modify canonical Process Trees
+- modify canonical Processes
 - delete or replace existing project files
 
 ai-driven-sdlc should first create traceable planning and governance artifacts.

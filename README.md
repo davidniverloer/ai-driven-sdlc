@@ -83,7 +83,7 @@ The installer creates:
 /path/to/your-project/.ai-sdlc/
 ```
 
-It copies the framework docs, commands, Process Tree, current skills, workflow
+It copies the framework docs, commands, Process, current skills, workflow
 placeholders, schema placeholders, and templates into that folder.
 
 To preview without writing files:
@@ -172,7 +172,7 @@ Expected proposal files:
 proposal.yaml
 classification.md
 repository-placement.md
-process-tree-impact.md
+process-impact.md
 similarity-analysis.md
 approval-checklist.md
 validation-report.md
@@ -190,7 +190,7 @@ ai-driven-sdlc does not silently:
 - promote skills
 - modify approved skills
 - modify approved workflows
-- modify canonical Process Trees
+- modify canonical Processes
 - change your application code
 
 Promotion is a separate review step.
@@ -236,7 +236,7 @@ The framework itself is organized around:
 - `docs/framework/`: conceptual models and contracts
 - `docs/execution/`: governance and validation rules
 - `docs/commands/`: user-facing command specs and command history
-- `process-trees/`: SDLC execution maps
+- `processes/`: SDLC execution maps
 - `skills/`: canonical skill packages
 - `proposals/`: proposed assets and promotion evidence
 - `templates/`: future package templates

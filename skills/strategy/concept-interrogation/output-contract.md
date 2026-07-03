@@ -27,7 +27,7 @@ The output artifact must distinguish:
 - downstream Wedge Definition inputs
 
 The artifact may support `PT-003 Wedge Definition`, but it must not silently
-rewrite the Process Tree boundary between `PT-002` and `PT-003`.
+rewrite the Process boundary between `PT-002` and `PT-003`.
 
 ## Validation Expectations
 

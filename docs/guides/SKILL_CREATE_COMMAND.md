@@ -39,7 +39,7 @@ The proposal package contains:
 - `proposal.yaml`
 - `classification.md`
 - `repository-placement.md`
-- `process-tree-impact.md`
+- `process-impact.md`
 - `similarity-analysis.md`
 - `approval-checklist.md`
 - `validation-report.md`
@@ -66,7 +66,7 @@ Use `/skill-create` for:
 ## What It Does Not Do
 
 `/skill-create` does not create canonical skills, promote skills, modify
-approved skills, modify approved workflows, modify canonical Process Trees,
+approved skills, modify approved workflows, modify canonical Processes,
 bypass validation, or bypass governance.
 
 The output is a skill proposal and promotion recommendation only.

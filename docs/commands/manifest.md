@@ -27,7 +27,7 @@ Related command index:
 | --- | --- | --- | --- |
 | Skill proposal intake | `/skill-create` as the first non-empty line | `.ai-sdlc/commands/skill-create.md` | Active |
 | Legacy skill proposal intake | `Compile the next protocol into an ai-driven-sdlc skill.` | `.ai-sdlc/commands/compile-next-protocol-into-skill.md` | Supported |
-| Process Tree creation | `Create an ai-driven-sdlc process tree named: <name>` | `.ai-sdlc/commands/create-process-tree.md` | Supported |
+| Process creation | `Create an ai-driven-sdlc process named: <name>` | `.ai-sdlc/commands/create-process.md` | Supported |
 
 ## Primary Starting Command
 
@@ -53,7 +53,7 @@ Agents must not:
 - rewrite submitted source prompts
 - promote proposed skills directly
 - modify approved skills directly
-- modify canonical Process Trees directly
+- modify canonical Processes directly
 - bypass validation or approval gates
 
 ## Important References
@@ -62,7 +62,7 @@ Read these before executing command behavior:
 
 ```text
 .ai-sdlc/guides/FIRST_RUN.md
-.ai-sdlc/process-trees/default.md
+.ai-sdlc/processes/default.md
 .ai-sdlc/framework/SKILL_INTAKE_COMPILER.md
 .ai-sdlc/framework/SKILL_PROPOSAL_MODEL.md
 .ai-sdlc/framework/PROMPT_IMMUTABILITY.md

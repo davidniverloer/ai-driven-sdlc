@@ -5,7 +5,7 @@ This document defines the canonical structure of a Skill Diff Report.
 A Skill Diff Report records comparison results between two skill assets or
 between a proposed skill and an existing canonical skill. It is governance
 evidence for validation, promotion, versioning, registry updates, and Process
-Tree review.
+review.
 
 The canonical report filename is:
 
@@ -26,7 +26,7 @@ skill-diff-report.md
 
 ## Version Impact
 
-## Process Tree Impact
+## Process Impact
 
 ## Promotion Impact
 
@@ -97,22 +97,22 @@ Include:
 - affected compatibility boundary
 - unresolved versioning questions
 
-## Process Tree Impact
+## Process Impact
 
-This section must describe Process Tree effects.
+This section must describe Process effects.
 
 Include:
 
-- affected tree
+- affected process
 - affected nodes
 - affected branches
 - consumed artifact changes
 - produced artifact changes
 - execution order changes
 - approval gate changes
-- terminal or out-of-tree classification when applicable
+- terminal or out-of-process classification when applicable
 
-If no Process Tree impact exists, state that explicitly.
+If no Process impact exists, state that explicitly.
 
 ## Promotion Impact
 
@@ -146,7 +146,7 @@ Recommended outcomes:
 - replace existing skill with approval
 
 The recommendation must be traceable to the diff category, similarity outcome,
-version impact, Process Tree impact, and promotion impact.
+version impact, Process impact, and promotion impact.
 
 ## Prompt Fidelity Requirement
 

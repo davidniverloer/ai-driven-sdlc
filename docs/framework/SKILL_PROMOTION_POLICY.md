@@ -3,7 +3,7 @@
 ## Purpose
 
 Promotion governance exists because canonical skills are approved framework
-assets. Once a skill becomes canonical, it can affect Process Trees, workflows,
+assets. Once a skill becomes canonical, it can affect Processes, workflows,
 future proposals, installation behavior, and downstream agents.
 
 Promotion is controlled to prevent unstable or unreviewed proposals from
@@ -21,9 +21,9 @@ New framework contributions must enter as proposals before promotion.
 
 Promotion may not occur until required validation is complete.
 
-**Process Tree Awareness**
+**Process Awareness**
 
-Promotion must account for Process Tree placement, artifact flow, execution
+Promotion must account for Process placement, artifact flow, execution
 order, and approval gates.
 
 **Prompt Immutability**
@@ -48,7 +48,7 @@ A proposal is eligible for promotion consideration only when:
 - validation passed
 - lifecycle state is valid
 - repository placement approved
-- Process Tree impact reviewed
+- Process impact reviewed
 - similarity analysis completed
 - Skill Diff analysis completed when a comparable skill exists
 - Skill Package Contract compliance verified for canonical admission
@@ -94,7 +94,7 @@ Required follow-up actions:
 
 - update canonical registry or index when available
 - perform post-promotion validation
-- update Process Tree references when applicable
+- update Process references when applicable
 
 ### PROMOTE_WITH_WARNINGS
 
@@ -150,7 +150,7 @@ Required follow-up actions:
 Promotion must be blocked when:
 
 - prompt fidelity violation exists
-- Process Tree conflict is unresolved
+- Process conflict is unresolved
 - repository placement conflict is unresolved
 - governance violation exists
 - duplicate canonical asset would be created
@@ -181,13 +181,13 @@ Replacement requires:
 - deprecation record for the replaced skill
 - compatibility assessment
 - migration guidance
-- Process Tree impact review
+- Process impact review
 - affected workflow review
 - canonical registry update when available
 - approval authority
 
 The replaced skill must be marked Deprecated before it can be Archived. Process
-Tree references must be updated or explicitly marked deprecated.
+references must be updated or explicitly marked deprecated.
 
 ## Promotion Traceability
 
@@ -202,7 +202,7 @@ Promotion records must include:
 - approval authority
 - lifecycle transition
 - repository placement
-- Process Tree impact
+- Process impact
 - compatibility impact
 - canonical registration recommendation
 - follow-up actions
@@ -217,7 +217,7 @@ Skill Diff analysis must classify:
 - diff category
 - similarity outcome
 - version impact
-- Process Tree impact
+- Process impact
 - promotion impact
 
 Promotion must be blocked or deferred when Skill Diff analysis is missing for a
@@ -236,7 +236,7 @@ Similarity outcomes affect promotion as follows:
 - Enhancement: require compatibility, version, and affected asset review.
 - Variant: require explicit rationale for separate canonical existence.
 - Replacement: require replacement approval, deprecation planning, lifecycle
-  review, and Process Tree impact review.
+  review, and Process impact review.
 - Duplicate: block promotion unless governance approves merge, variant, or
   replacement handling.
 - Incompatible: block promotion until the incompatibility is resolved and
@@ -248,7 +248,7 @@ Promotion to canonical skill requires Skill Package Contract compliance.
 
 Promotion review must verify that the proposed canonical skill package contains
 required files, required metadata, immutable source prompts, output contract
-expectations, repository placement, Process Tree references, lifecycle state,
+expectations, repository placement, Process references, lifecycle state,
 dependencies, and source proposal traceability.
 
 Promotion must be blocked or deferred when package structure is incomplete,

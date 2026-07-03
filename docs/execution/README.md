@@ -13,7 +13,7 @@ untraceable framework behavior.
 - `DECISIONS.md` records architectural decisions.
 - `RISK_REGISTER.md` tracks framework risks and mitigations.
 - `VALIDATION_PROTOCOL.md` defines validation expectations for governed assets.
-- `PROCESS_TREE_POLICY.md` defines when and how the canonical Process Tree must
+- `PROCESS_POLICY.md` defines when and how the canonical Process must
   be updated.
 - `ASSET_EVOLUTION_POLICY.md` defines safe, risky, and breaking asset changes.
 - `GIT_GOVERNANCE.md` defines protected operations, approval gates, and commit
@@ -37,4 +37,4 @@ For any non-trivial change:
 5. Validate according to `VALIDATION_PROTOCOL.md`.
 6. Record new decisions when architectural meaning changes.
 7. Use approval gates before protected git, GitHub, or worktree operations.
-8. Check Process Tree impact before creating or modifying skills or workflows.
+8. Check Process impact before creating or modifying skills or workflows.

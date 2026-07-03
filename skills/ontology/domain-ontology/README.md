@@ -38,12 +38,12 @@ CLI, or runtime.
 
 ## Dependencies
 
-- `process-trees/default.md`
+- `processes/default.md`
 - `PT-003 Wedge Definition`
 - `skills/strategy/concept-interrogation/`
 - Immutable source prompts under `source/`
 
-## Process Tree Relationship
+## Process Relationship
 
 This skill is the canonical implementation package for:
 

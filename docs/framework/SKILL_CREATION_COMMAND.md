@@ -33,7 +33,7 @@ Capability Classification
 ↓
 Repository Mapping
 ↓
-Process Tree Mapping
+Process Mapping
 ↓
 Similarity Analysis
 ↓
@@ -57,7 +57,7 @@ The command is responsible for:
 - preserving source prompts verbatim
 - classifying capability
 - mapping repository placement
-- mapping Process Tree impact
+- mapping Process impact
 - running similarity analysis
 - generating a skill proposal package
 - generating validation evidence
@@ -69,7 +69,7 @@ The command must generate:
 proposal.yaml
 classification.md
 repository-placement.md
-process-tree-impact.md
+process-impact.md
 approval-checklist.md
 source/
 validation-report.md
@@ -82,7 +82,7 @@ The command may:
 - classify submissions
 - annotate externally
 - map repository placement
-- map Process Tree impact
+- map Process impact
 - package proposal artifacts
 - validate proposal readiness
 - recommend promotion disposition
@@ -99,7 +99,7 @@ The command may not:
 - promote skills
 - modify approved skills
 - modify approved workflows
-- modify canonical Process Trees
+- modify canonical Processes
 
 The command is proposal-generating only.
 
@@ -114,8 +114,8 @@ Relationship to existing models:
 - Protocol Recognition follows `docs/framework/AB_PROTOCOL_MODEL.md`.
 - Prompt preservation follows `docs/framework/PROMPT_IMMUTABILITY.md`.
 - Repository Mapping follows `docs/framework/REPOSITORY_MAPPING_ENGINE.md`.
-- Process Tree Mapping follows
-  `docs/framework/PROCESS_TREE_INTEGRATION_RULES.md`.
+- Process Mapping follows
+  `docs/framework/PROCESS_INTEGRATION_RULES.md`.
 - Similarity Analysis follows
   `docs/framework/SIMILARITY_ANALYSIS_ENGINE.md`.
 - Skill Intake follows `docs/framework/SKILL_INTAKE_COMPILER.md`.
@@ -131,7 +131,7 @@ The command must report:
 - detected protocol type
 - detected capability
 - repository location
-- Process Tree impact
+- Process impact
 - similarity outcome
 - proposal location
 - validation outcome

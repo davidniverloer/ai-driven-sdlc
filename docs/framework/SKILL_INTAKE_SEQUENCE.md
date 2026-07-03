@@ -13,7 +13,7 @@ Classification
 ↓
 Repository Mapping
 ↓
-Process Tree Mapping
+Process Mapping
 ↓
 Similarity Analysis
 ↓
@@ -46,9 +46,9 @@ The intake is mapped to a capability family such as `strategy`, `requirements`,
 The intake receives a proposed repository location. Placement must be explained
 and must not be inferred silently.
 
-**Process Tree Mapping**
+**Process Mapping**
 
-The intake is mapped to the relevant Process Tree, affected node, proposed
+The intake is mapped to the relevant Process, affected node, proposed
 placement, artifact impact, approval gate impact, and execution order impact.
 
 **Similarity Analysis**
@@ -64,7 +64,7 @@ remain verbatim under `source/`.
 **Validation**
 
 The package is validated for prompt fidelity, protocol classification,
-capability classification, repository mapping, Process Tree mapping, package
+capability classification, repository mapping, Process mapping, package
 completeness, and governance compliance.
 
 **Promotion Review**

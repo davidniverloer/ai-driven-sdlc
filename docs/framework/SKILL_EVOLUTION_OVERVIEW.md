@@ -7,7 +7,7 @@ ai-driven-sdlc.
 
 It accepts prompts and protocols as source artifacts, preserves them verbatim,
 classifies their protocol and capability type, maps them to repository and
-Process Tree locations, packages them as proposals, validates those proposals,
+Process locations, packages them as proposals, validates those proposals,
 and prepares them for promotion review.
 
 It is designed to let the framework expand itself safely while approved assets
@@ -26,7 +26,7 @@ Capability Classification
 ↓
 Repository Mapping
 ↓
-Process Tree Mapping
+Process Mapping
 ↓
 Similarity Analysis
 ↓
@@ -56,8 +56,8 @@ source prompt
 ```text
 skill proposal
   -> repository-placement.md
-  -> process-tree-impact.md
-  -> process-trees/default.md or experimental process tree
+  -> process-impact.md
+  -> processes/default.md or experimental process
 ```
 
 ### Proposal to Promotion
@@ -75,7 +75,7 @@ skill proposal
 - Source prompts remain verbatim.
 - New contributions enter as proposals.
 - Approved assets remain stable.
-- Process Tree impact is required for proposed skills.
+- Process impact is required for proposed skills.
 - Validation happens before promotion consideration.
 - Promotion requires governance approval.
 
@@ -90,5 +90,5 @@ skill proposal
 - `PROPOSAL_ARCHITECTURE.md`: proposal-first framework evolution.
 - `PROPOSAL_LIFECYCLE.md`: proposal states and transitions.
 - `SKILL_PROPOSAL_MODEL.md`: required package shape for proposed skills.
-- `PROCESS_TREE_INTEGRATION_RULES.md`: Process Tree placement rules.
-- `process-trees/default.md`: active default canonical Process Tree.
+- `PROCESS_INTEGRATION_RULES.md`: Process placement rules.
+- `processes/default.md`: active default canonical Process.

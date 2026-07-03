@@ -6,7 +6,7 @@ The Repository Mapping Engine defines how proposed framework assets are mapped
 to repository locations before promotion or canonical admission.
 
 It exists because ai-driven-sdlc contains multiple governed asset families:
-skills, workflows, Process Trees, schemas, adapters, installation assets, and
+skills, workflows, Processes, schemas, adapters, installation assets, and
 governance assets. Placement decisions must be deterministic, traceable, and
 reviewable so agents do not create arbitrary paths, infer locations silently, or
 modify approved assets without governance.
@@ -17,7 +17,7 @@ The engine solves:
 - repository placement recommendation
 - path validation
 - collision prevention
-- Process Tree placement consistency
+- Process placement consistency
 - proposal traceability
 - promotion readiness evidence
 
@@ -49,7 +49,7 @@ conflicts before promotion or canonical writes occur.
 
 ### Traceability
 
-Record the classification, rationale, affected assets, Process Tree
+Record the classification, rationale, affected assets, Process
 relationship, collision analysis, and recommendation in a placement report.
 
 ## Asset Categories
@@ -70,12 +70,12 @@ Repository ownership: `workflows/` for canonical workflows and
 Workflows orchestrate skills into execution sequences and should not duplicate
 skill definitions.
 
-### Process Trees
+### Processes
 
-Repository ownership: `process-trees/` for canonical or governed Process Trees
-and `proposals/process-trees/` for proposed tree changes.
+Repository ownership: `processes/` for canonical or governed Processes
+and `proposals/processes/` for proposed process changes.
 
-Process Trees define execution paths, branches, artifact flow, and approval
+Processes define execution paths, branches, artifact flow, and approval
 gates.
 
 ### Schemas
@@ -135,7 +135,7 @@ Capability mapping must document:
 - confidence level or ambiguity
 - rationale
 - expected path
-- Process Tree relationship
+- Process relationship
 
 Ambiguous capability mapping must be recorded as ambiguity. Agents must not
 resolve ambiguity by silently choosing a convenient path.
@@ -179,7 +179,7 @@ governance approves merge, replacement, or variant treatment.
 Meaning: the proposed asset appears intended to supersede an existing asset.
 
 Expected behavior: require replacement review, Skill Diff analysis, migration
-guidance, deprecation planning, registry update planning, and Process Tree
+guidance, deprecation planning, registry update planning, and Process
 impact review.
 
 ## Collision Detection
@@ -204,7 +204,7 @@ Every placement recommendation must explain:
 
 - capability
 - path
-- Process Tree relationship
+- Process relationship
 - affected assets
 
 Rationale should also identify whether the path exists, whether the path is
@@ -236,7 +236,7 @@ The canonical report structure is defined in
 - placement must be traceable
 - placement must be deterministic
 - placement must not overwrite approved assets
-- placement must align with Process Trees
+- placement must align with Processes
 - placement must identify collisions before promotion
 - placement must be recorded before canonical asset creation
 
@@ -244,22 +244,22 @@ Repository mapping may recommend placement. It may not perform the write,
 promote the asset, modify approved assets, or bypass protected operation
 governance.
 
-## Process Tree Relationship
+## Process Relationship
 
-Repository placement and Process Tree placement must agree.
+Repository placement and Process placement must agree.
 
-Repository placement defines where an asset lives. Process Tree placement
+Repository placement defines where an asset lives. Process placement
 defines how the asset participates in execution.
 
 Placement analysis must identify:
 
-- related Process Tree nodes
-- related Process Tree branches
+- related Process nodes
+- related Process branches
 - related execution paths
 - consumed artifact relationships
 - produced artifact relationships
 - approval gate relationships
-- terminal or out-of-tree classification when no Process Tree placement exists
+- terminal or out-of-process classification when no Process placement exists
 
 A proposed repository location is not sufficient for promotion unless the
-Process Tree relationship is also valid or explicitly terminal.
+Process relationship is also valid or explicitly terminal.

@@ -917,3 +917,57 @@ Reference it from the command manifest, getting started guide, and README.
 Installed repositories now have a practical first-run checklist. The guide is
 documentation only; it does not add automation, schemas, or executable workflow
 behavior.
+
+## ADR-0033: Rename Process Trees to Processes With Compatibility
+
+Date: 2026-07-03
+Status: Accepted
+
+### Context
+
+The framework used the label "Process Tree" for Markdown execution maps. That
+term created unnecessary complexity for non-expert users. The simpler label
+"Process" better matches the mental model of a governed SDLC path while keeping
+the same underlying purpose: execution order, artifact flow, approval gates,
+repository placement, and handoffs.
+
+The old `process-trees/` path was already referenced by skills, proposals,
+installer output, governance docs, and installed guides, so a direct deletion
+would break existing references.
+
+### Decision
+
+Promote `processes/` as the canonical directory for execution maps.
+
+Canonical current files now include:
+
+```text
+processes/default.md
+processes/README.md
+processes/templates/process-template.md
+docs/framework/PROCESS_MODEL.md
+docs/framework/PROCESS_INTEGRATION_RULES.md
+docs/execution/PROCESS_POLICY.md
+proposals/processes/
+```
+
+Retain legacy compatibility pointers at:
+
+```text
+process-trees/
+docs/framework/PROCESS_TREE.md
+docs/framework/PROCESS_TREE_INTEGRATION_RULES.md
+docs/execution/PROCESS_TREE_POLICY.md
+docs/commands/create-process-tree.md
+proposals/process-trees/
+```
+
+Install both `processes/` and the legacy `process-trees/` pointer directory so
+existing installed references do not fail immediately.
+
+### Consequences
+
+New work must use the "Process" label and `processes/` paths. Existing
+historical command records and proposal evidence may continue to mention
+Process Trees as historical context. The compatibility path can be removed only
+after versioned migration support exists.

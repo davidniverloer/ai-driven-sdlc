@@ -42,7 +42,7 @@ Natural-language trigger detection is forbidden.
 
 Boundary: proposal generation only. The command must not create canonical
 skills, promote skills, modify approved skills, modify approved workflows,
-modify canonical Process Trees, bypass validation, or bypass governance.
+modify canonical Processes, bypass validation, or bypass governance.
 
 ### Compile the Next Protocol Into a Skill
 
@@ -63,23 +63,23 @@ from submitted prompts or protocols.
 
 Boundary: proposal generation only. The command must not create canonical
 skills, promote skills, modify approved skills, modify approved workflows, or
-modify canonical Process Trees.
+modify canonical Processes.
 
-### Create a Process Tree
+### Create a Process
 
 Trigger phrase pattern:
 
 ```text
-Create an ai-driven-sdlc process tree named: <name>
+Create an ai-driven-sdlc process named: <name>
 ```
 
 Specification:
 
 ```text
-docs/commands/create-process-tree.md
+docs/commands/create-process.md
 ```
 
-Purpose: define a governed Process Tree creation request.
+Purpose: define a governed Process creation request.
 
 ## Installation Boundary
 

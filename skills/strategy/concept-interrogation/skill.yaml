@@ -5,10 +5,10 @@ protocol_type: "ab_protocol"
 lifecycle_state: "Canonical"
 version: "1.0.0"
 repository_location: "skills/strategy/concept-interrogation/"
-process_tree_nodes:
+process_nodes:
   - "PT-002"
 dependencies:
-  - "process-trees/default.md"
+  - "processes/default.md"
   - "PT-001 Raw Concept Intake"
   - "PT-003 Wedge Definition"
 source_proposal: "proposals/skills/strategy/concept-interrogation-map/"

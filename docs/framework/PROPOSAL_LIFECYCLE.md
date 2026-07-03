@@ -41,7 +41,7 @@ Requirements:
 - proposal category exists
 - lifecycle state is recorded
 - repository placement is proposed
-- Process Tree impact is assessed
+- Process impact is assessed
 - ownership is documented
 
 Transition to Validated:
@@ -116,7 +116,7 @@ Approval is required before promotion. Approval must identify:
 - approved scope
 - compatibility impact
 - breaking-change impact
-- Process Tree impact
+- Process impact
 - validation evidence
 
 ## Promotion Requirements

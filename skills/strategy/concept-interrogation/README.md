@@ -35,12 +35,12 @@ CLI, or runtime.
 
 ## Dependencies
 
-- `process-trees/default.md`
+- `processes/default.md`
 - `PT-001 Raw Concept Intake`
 - `PT-003 Wedge Definition`
 - Immutable source prompts under `source/`
 
-## Process Tree Relationship
+## Process Relationship
 
 This skill is the canonical implementation package for:
 
@@ -52,7 +52,7 @@ It consumes `A-001 Raw Concept Intake Brief` and produces `A-002 Interrogated
 Concept Brief`.
 
 The output may inform `PT-003 Wedge Definition`, but it does not replace the
-separate Wedge Definition node unless the Process Tree is changed through
+separate Wedge Definition node unless the Process is changed through
 governance.
 
 ## Protocol Shape

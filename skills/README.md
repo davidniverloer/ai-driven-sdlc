@@ -20,7 +20,7 @@ Capability folders:
 - `governance/`
 - `bootstrapping/`
 
-Skills should remain agent-agnostic and reusable. Workflows and Process Trees
+Skills should remain agent-agnostic and reusable. Workflows and Processes
 decide sequencing.
 
 ## Canonical Skill Discovery
@@ -34,7 +34,7 @@ Use the registry to discover:
 - capability
 - lifecycle state
 - repository location
-- Process Tree nodes
+- Process nodes
 - current version
 - source proposal
 - dependencies
@@ -44,7 +44,7 @@ Use the registry to discover:
 `skills/` stores canonical skill assets.
 
 The Skill Registry indexes skill assets and tracks lifecycle, placement,
-Process Tree relationships, dependencies, and traceability.
+Process relationships, dependencies, and traceability.
 
 Canonical skills must appear in the registry. Deprecated skills must remain
 traceable. Archived skills must remain discoverable through registry references.

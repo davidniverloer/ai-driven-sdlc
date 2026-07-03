@@ -14,7 +14,7 @@ Name:
 Capability:
 Lifecycle State:
 Repository Location:
-Process Tree Nodes:
+Process Nodes:
 Current Version:
 Status:
 Source Proposal:
@@ -45,9 +45,9 @@ Current state from `docs/framework/SKILL_LIFECYCLE.md`.
 Path to the canonical skill under `skills/` or proposed skill under
 `proposals/skills/`.
 
-**Process Tree Nodes**
+**Process Nodes**
 
-Process Tree file and node references related to the skill.
+Process file and node references related to the skill.
 
 **Current Version**
 
@@ -64,7 +64,7 @@ Proposal ID or path that introduced or last materially changed the skill.
 
 **Dependencies**
 
-Related skills, workflows, schemas, Process Tree nodes, or external dependencies
+Related skills, workflows, schemas, Process nodes, or external dependencies
 that affect use or validation.
 
 ## Recommended Markdown Entry Shape
@@ -75,7 +75,7 @@ that affect use or validation.
 **Capability:** <capability>
 **Lifecycle State:** <state>
 **Repository Location:** <path>
-**Process Tree Nodes:** <tree/node refs>
+**Process Nodes:** <tree/node refs>
 **Current Version:** <version>
 **Status:** <status>
 **Source Proposal:** <proposal-id or path>
@@ -90,6 +90,6 @@ Entries must preserve references to:
 - validation evidence
 - promotion decision
 - lifecycle transition
-- Process Tree impact
+- Process impact
 - replacement skill when deprecated
 - archive reference when archived

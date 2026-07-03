@@ -45,7 +45,7 @@ Supported asset categories:
 
 - skill
 - workflow
-- process tree
+- process
 - schema
 - adapter
 - installation asset
@@ -86,7 +86,7 @@ Include:
 
 - capability rationale
 - repository ownership rationale
-- Process Tree relationship
+- Process relationship
 - affected assets
 - known alternatives considered
 
@@ -119,7 +119,7 @@ Recommended outcomes:
 - Blocked Pending Clarification
 
 The recommendation must explain required follow-up actions, governance review,
-Process Tree review, and whether promotion may proceed.
+Process review, and whether promotion may proceed.
 
 ## Governance Requirement
 

@@ -77,7 +77,8 @@ print_plan() {
   printf '%s\n' "  guides/"
   printf '%s\n' "  framework/"
   printf '%s\n' "  execution/"
-  printf '%s\n' "  process-trees/"
+  printf '%s\n' "  processes/"
+  printf '%s\n' "  process-trees/ (legacy compatibility)"
   printf '%s\n' "  skills/"
   printf '%s\n' "  workflows/"
   printf '%s\n' "  schemas/"
@@ -111,6 +112,7 @@ copy_dir "$script_dir/docs/commands" "$install_dir/commands"
 copy_dir "$script_dir/docs/guides" "$install_dir/guides"
 copy_dir "$script_dir/docs/framework" "$install_dir/framework"
 copy_dir "$script_dir/docs/execution" "$install_dir/execution"
+copy_dir "$script_dir/processes" "$install_dir/processes"
 copy_dir "$script_dir/process-trees" "$install_dir/process-trees"
 copy_dir "$script_dir/skills" "$install_dir/skills"
 copy_dir "$script_dir/workflows" "$install_dir/workflows"
@@ -139,6 +141,7 @@ installed_assets:
 - guides
 - framework
 - execution
+- processes
 - process-trees
 - skills
 - workflows

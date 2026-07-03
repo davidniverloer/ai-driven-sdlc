@@ -43,7 +43,7 @@ The report must cover:
 - Protocol Validation
 - Capability Validation
 - Repository Placement Validation
-- Process Tree Validation
+- Process Validation
 - Proposal Package Validation
 - Governance Validation
 
@@ -63,7 +63,7 @@ Examples:
 - source prompts are present under `source/`
 - protocol type is `ab_protocol`
 - proposed repository location matches capability
-- Process Tree impact report identifies affected nodes
+- Process impact report identifies affected nodes
 
 ## Warnings
 
@@ -73,7 +73,7 @@ Examples:
 
 - classification confidence is medium
 - similar skill exists but does not appear duplicative
-- Process Tree impact is limited to an experimental tree
+- Process impact is limited to an experimental process
 
 Warnings must state whether they block promotion consideration.
 
@@ -86,7 +86,7 @@ Examples:
 - source prompt wording changed
 - `proposal.yaml` missing required metadata
 - repository placement conflicts with an existing asset
-- Process Tree impact report is missing
+- Process impact report is missing
 - approval checklist is incomplete
 
 Failures block promotion consideration.

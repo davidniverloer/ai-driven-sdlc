@@ -9,7 +9,7 @@ A/B protocols are first-class citizens because much of the expertise entering
 the framework arrives as paired reasoning: one prompt discovers, interrogates,
 or stress-tests; another prompt synthesizes, formalizes, or freezes output.
 Recognizing that relationship is necessary for accurate packaging, proposal
-generation, repository mapping, and Process Tree mapping.
+generation, repository mapping, and Process mapping.
 
 Protocol structure must be preserved because ordering, wording, and
 relationships carry author intent. The model classifies and packages protocols.
@@ -36,7 +36,7 @@ reasoning, generation, validation, or governance steps.
 ### Workflow Protocol
 
 A sequence intended to orchestrate multiple skills, artifacts, gates, handoffs,
-or Process Tree nodes.
+or Process nodes.
 
 ### Capability Protocol
 
@@ -105,7 +105,7 @@ pair with separate metadata for:
 - relationship summary
 - proposed capability
 - proposed repository mapping
-- proposed Process Tree mapping
+- proposed Process mapping
 - fidelity validation status
 
 The metadata may describe the pair, but it must not modify either prompt.
@@ -134,7 +134,7 @@ ordering is meaningful.
 **workflow_protocol**
 
 Use when the submission orchestrates multiple skills, workflows, artifacts,
-approval gates, handoffs, or Process Tree nodes.
+approval gates, handoffs, or Process nodes.
 
 **capability_protocol**
 
@@ -225,11 +225,11 @@ Classification may inform:
 - capability selection
 - proposed skill location
 - whether the protocol maps to `skills/`, `workflows/`, or proposal storage
-- whether Process Tree placement is required
+- whether Process placement is required
 - whether existing skills or workflows should be compared for similarity
 - whether approval gates or artifact dependencies may be affected
 
-Final placement still requires repository mapping, Process Tree mapping,
+Final placement still requires repository mapping, Process mapping,
 validation, and approval according to framework governance.
 
 ## Prompt Fidelity Requirements

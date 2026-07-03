@@ -7,7 +7,7 @@ It contains the skill's metadata, human-readable contract, output expectations,
 source prompts, examples, and governance relationships.
 
 A canonical structure exists so every admitted skill can be discovered,
-validated, versioned, promoted, mapped to Process Trees, registered, and evolved
+validated, versioned, promoted, mapped to Processes, registered, and evolved
 without depending on a specific agent or vendor.
 
 The contract solves:
@@ -16,7 +16,7 @@ The contract solves:
 - source prompt preservation
 - promotion evidence alignment
 - versioning traceability
-- Process Tree integration
+- Process integration
 - repository mapping clarity
 - registry compatibility
 - validation readiness
@@ -70,7 +70,7 @@ metadata may describe steps, but it must not replace the source sequence.
 
 ### Workflow Component Skills
 
-Workflow component skills must declare their intended workflow or Process Tree
+Workflow component skills must declare their intended workflow or Process
 relationship without duplicating workflow orchestration. The package must make
 the skill's own inputs, outputs, and artifact handoffs clear.
 
@@ -102,7 +102,7 @@ Every `skill.yaml` must include:
 - `lifecycle_state`
 - `version`
 - `repository_location`
-- `process_tree_nodes`
+- `process_nodes`
 - `dependencies`
 - `source_proposal`
 
@@ -118,7 +118,7 @@ Expected metadata intent:
 - `lifecycle_state`: current lifecycle state.
 - `version`: current skill version.
 - `repository_location`: canonical repository path.
-- `process_tree_nodes`: related Process Tree nodes or terminal classification.
+- `process_nodes`: related Process nodes or terminal classification.
 - `dependencies`: required skills, workflows, schemas, documents, or tools.
 - `source_proposal`: proposal that introduced or last materially changed the
   canonical package.
@@ -132,7 +132,7 @@ Every package `README.md` must include:
 - inputs
 - outputs
 - dependencies
-- Process Tree relationship
+- Process relationship
 
 The README must describe the skill as an agent-agnostic capability. It must not
 assume Codex, Claude, Cursor, or another vendor-specific implementation.
@@ -184,13 +184,13 @@ Repository Mapping Engine.
 Packages must relate to:
 
 - capability folders
-- Process Tree nodes
+- Process nodes
 - canonical registry
 
 The package `repository_location` must match its repository path. Its
 `capability` must align with the owning capability folder or include an approved
-exception. Its `process_tree_nodes` must identify related Process Tree nodes or
-explicitly state terminal or out-of-tree classification. Canonical registration
+exception. Its `process_nodes` must identify related Process nodes or
+explicitly state terminal or out-of-process classification. Canonical registration
 requires package contract compliance.
 
 ## Lifecycle Requirements
@@ -219,7 +219,7 @@ A valid canonical skill package must contain:
 - output contract sections
 - example input and output requirements
 - repository placement alignment
-- Process Tree references or terminal classification
+- Process references or terminal classification
 - lifecycle state
 - source proposal reference
 - dependency declarations

@@ -6,7 +6,7 @@ The Skill Registry is the authoritative inventory of framework skills.
 
 It indexes approved, canonical, deprecated, archived, and proposed skills so
 future agents can discover what exists, where it lives, which capability owns it,
-which Process Tree nodes reference it, and how it traces back to proposals and
+which Process nodes reference it, and how it traces back to proposals and
 promotion decisions.
 
 The registry is not responsible for storing skills. Skills live under `skills/`
@@ -19,7 +19,7 @@ The registry solves:
 - lifecycle visibility
 - repository location tracking
 - capability ownership tracking
-- Process Tree relationship tracking
+- Process relationship tracking
 - version visibility
 - dependency traceability
 - deprecation and archival discoverability
@@ -43,9 +43,9 @@ Identify the repository path where a canonical or proposed skill lives.
 
 Group and discover skills by capability family.
 
-**Process Tree Tracking**
+**Process Tracking**
 
-Record Process Tree files, nodes, and impact relationships for each skill.
+Record Process files, nodes, and impact relationships for each skill.
 
 **Version Tracking**
 
@@ -85,7 +85,7 @@ Every skill entry must include:
 - Capability
 - Lifecycle State
 - Repository Location
-- Process Tree Nodes
+- Process Nodes
 - Current Version
 - Status
 - Source Proposal
@@ -109,24 +109,24 @@ Skills are grouped by capability:
 - framework
 
 Capability ownership determines discovery and repository placement. It does not
-define execution order; Process Trees define execution order.
+define execution order; Processes define execution order.
 
-## Process Tree Relationships
+## Process Relationships
 
 Registry entries should reference:
 
-- canonical process trees
-- experimental process trees when applicable
-- Process Tree node IDs
-- Process Tree impact reports
+- canonical processes
+- experimental processes when applicable
+- Process node IDs
+- Process impact reports
 - consumed artifacts
 - produced artifacts
 - approval gate relationships
 
-For the active default tree, references should point to:
+For the active default process, references should point to:
 
 ```text
-process-trees/default.md
+processes/default.md
 ```
 
 ## Version Tracking
@@ -177,7 +177,7 @@ Every registry entry must trace back to:
 - proposals
 - validations
 - promotions
-- Process Tree impacts
+- Process impacts
 - approval records
 - lifecycle transitions
 - repository locations

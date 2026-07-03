@@ -52,7 +52,7 @@ Capability Classification
 ↓
 Repository Mapping
 ↓
-Process Tree Mapping
+Process Mapping
 ↓
 Similarity Analysis
 ↓
@@ -81,7 +81,7 @@ The command generates:
 - `proposal.yaml`
 - `classification.md`
 - `repository-placement.md`
-- `process-tree-impact.md`
+- `process-impact.md`
 - `similarity-analysis.md`
 - `approval-checklist.md`
 - `validation-report.md`
@@ -121,6 +121,6 @@ The command must not:
 - promote skills
 - modify approved skills
 - modify approved workflows
-- modify canonical Process Trees
+- modify canonical Processes
 - bypass validation
 - bypass governance

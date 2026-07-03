@@ -1,91 +1,138 @@
 # ai-driven-sdlc
 
-ai-driven-sdlc is an installable, agent-agnostic SDLC skill framework.
+ai-driven-sdlc helps an AI coding agent work through software planning before
+it jumps into implementation.
 
-It injects structured AI workflows into any software repository through a local
-`.ai-sdlc/` operating layer. The framework helps local AI agents move from raw
-concept to structured requirements, architecture, execution planning, and
-governed implementation.
+It gives your repository a lightweight SDLC operating layer: commands,
+governance rules, process maps, and reusable skills that help move from a raw
+idea to requirements, architecture, execution planning, and implementation.
 
-## Design Principles
+It is designed to work with Codex, Claude Code, Cursor, or any local agent. The
+framework is agent-agnostic and avoids vendor lock-in.
 
-- Skills are grouped by capability, not by SDLC phase.
-- Workflows orchestrate skills into phase-like sequences.
-- Skills stay agent-agnostic and avoid vendor-specific assumptions.
-- Installation must be safe for new and existing repositories.
-- The repository should remain lightweight until real project needs justify
-  additional structure.
+## Who This Is For
 
-## Repository Layout
+Use ai-driven-sdlc if you want an AI agent to help you:
 
-```text
-docs/       Framework and execution documentation.
-process-trees/ Markdown execution maps for supported SDLC paths.
-schemas/    Placeholder area for future machine-readable contracts.
-skills/     Capability-grouped skill families.
-workflows/  Workflow definitions that compose skills.
-install.sh  Safe placeholder installer entrypoint.
-uninstall.sh Safe placeholder uninstaller entrypoint.
-```
+- challenge a raw project idea before building
+- turn vague intent into structured requirements
+- keep terminology consistent across a project
+- map decisions into a visible process
+- preserve source prompts and decisions
+- avoid accidental rewrites of approved planning assets
 
-## Process Trees
+You do not need to understand the internal framework documents to start.
 
-Process Trees are Markdown source-of-truth execution maps for ai-driven-sdlc.
-They define execution order, skill and workflow sequence, artifact dependencies,
-approval gates, repository placement, and downstream handoffs.
+## What It Helps You Do
 
-ai-driven-sdlc supports multiple Process Trees because different projects may
-need different SDLC paths, such as default full SDLC, lightweight MVP, UX-first,
-architecture-first, repository-bootstrap-only, or enterprise-governed flows.
-
-Process Trees live under:
+ai-driven-sdlc gives your agent a governed path:
 
 ```text
-process-trees/<name>.md
+raw concept
+↓
+concept interrogation
+↓
+domain ontology
+↓
+strategic charter
+↓
+requirements
+↓
+UX reasoning
+↓
+architecture
+↓
+execution planning
+↓
+governed implementation
 ```
 
-The active default canonical Process Tree is:
+The current framework includes the first canonical skills:
+
+- `concept-interrogation`
+- `domain-ontology`
+
+More skills are added through proposals before they become canonical.
+
+## Install
+
+From any terminal, run this one-liner:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/davidniverloer/ai-driven-sdlc/main/bootstrap.sh | sh
+```
+
+Run it from the root of the repository where you want the `.ai-sdlc/` operating
+layer installed.
+
+If you already cloned this repository, you can run the installer directly:
+
+```sh
+./install.sh
+```
+
+To install into a different repository, pass an explicit path:
+
+```sh
+./install.sh ../my-app
+```
+
+The installer creates:
 
 ```text
-process-trees/default.md
+/path/to/your-project/.ai-sdlc/
 ```
 
-Legacy references to `docs/framework/PROCESS_TREE.md` should be treated as
-compatibility pointers only.
+It copies the framework docs, commands, Process Tree, current skills, workflow
+placeholders, schema placeholders, and templates into that folder.
 
-To create one, use the canonical trigger phrase:
+To preview without writing files:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/davidniverloer/ai-driven-sdlc/main/bootstrap.sh | sh -s -- --dry-run
+```
+
+To remove the installed `.ai-sdlc/` layer safely:
+
+```sh
+.ai-sdlc/uninstall.sh
+```
+
+To preview uninstall:
+
+```sh
+.ai-sdlc/uninstall.sh --dry-run
+```
+
+## Safety
+
+The installer is intentionally conservative.
+
+- It never writes outside `.ai-sdlc/`.
+- If `.ai-sdlc/` already exists, it is moved to a timestamped backup first.
+- It writes an install manifest.
+- It does not modify your app code.
+- It does not install a background service.
+- It does not run AI commands automatically.
+- The uninstaller moves `.ai-sdlc/` to a timestamped backup instead of deleting
+  it.
+
+## Start Using It
+
+After installing, open your target repository in your AI coding agent.
+
+Paste this command as the first non-empty line:
 
 ```text
-Create an ai-driven-sdlc process tree named: ux-first
+/skill-create
+
+[Your prompt or protocol goes here]
 ```
 
-The command specification is documented in
-`docs/commands/create-process-tree.md`.
+Everything after `/skill-create` is treated as source material for a proposed
+skill.
 
-Official command documentation is indexed at:
-
-```text
-docs/commands/README.md
-```
-
-## Creating Skills
-
-## /skill-create
-
-`/skill-create` explicitly activates Skill Intake Mode and converts the
-following submitted prompt or protocol into a proposed ai-driven-sdlc skill
-package.
-
-Generated proposals are created under:
-
-```text
-proposals/skills/<capability>/<proposed-skill-id>/
-```
-
-Submitted prompts are preserved verbatim under `source/`. Approved skills,
-approved workflows, and canonical Process Trees are never modified directly.
-
-How to use it:
+Example:
 
 ```text
 /skill-create
@@ -95,182 +142,101 @@ How to use it:
 [B Prompt]
 ```
 
-## Skill Creation Command
-
-The Skill Creation Command guide explains how contributors can submit prompts
-and protocols for skill proposal generation:
+The command documentation is installed at:
 
 ```text
-docs/guides/SKILL_CREATION_COMMAND_GUIDE.md
+.ai-sdlc/commands/skill-create.md
 ```
 
-Trigger phrase:
+The contributor guide is installed at:
 
 ```text
-Compile the next protocol into an ai-driven-sdlc skill.
+.ai-sdlc/guides/SKILL_CREATE_COMMAND.md
 ```
 
-### Command
+## What Gets Created
+
+`/skill-create` creates a proposal package, not a canonical skill.
+
+Expected proposal location:
 
 ```text
-Compile the next protocol into an ai-driven-sdlc skill.
+proposals/skills/<capability>/<proposed-skill-id>/
 ```
 
-This command activates Skill Intake Mode and generates a governed skill proposal
-package from a submitted prompt or protocol.
-
-### Example
+Expected proposal files:
 
 ```text
-Compile the next protocol into an ai-driven-sdlc skill.
-
-[A Prompt]
-
-[B Prompt]
+proposal.yaml
+classification.md
+repository-placement.md
+process-tree-impact.md
+similarity-analysis.md
+approval-checklist.md
+validation-report.md
+source/
 ```
 
-### Expected Outcome
+The `source/` directory preserves submitted prompts verbatim.
 
-The command preserves submitted prompts verbatim, classifies the protocol,
-determines capability, maps repository placement, maps Process Tree impact,
-runs similarity analysis, generates a proposal package, validates the proposal,
-and produces a promotion recommendation.
+## What It Will Not Do
 
-The command generates proposals only. It does not create canonical skills,
-promote skills, modify approved skills, modify approved workflows, or modify
-canonical Process Trees.
+ai-driven-sdlc does not silently:
 
-## Skill Evolution System
+- rewrite your prompts
+- create canonical skills
+- promote skills
+- modify approved skills
+- modify approved workflows
+- modify canonical Process Trees
+- change your application code
 
-The Skill Evolution System is the governance path for turning new expertise into
-future framework assets. It exists so ai-driven-sdlc can absorb prompts,
-protocols, and engineering methods without destabilizing approved skills,
-workflows, Process Trees, schemas, adapters, or installation assets.
+Promotion is a separate review step.
 
-The system solves a central framework problem: new expertise must be captured
-and evaluated, but approved assets must remain stable. Contributions therefore
-enter as proposals first, are validated, and only become canonical after
-governance review.
+## Learn More
 
-## Skill Evolution Flow
+Start here:
 
 ```text
-Prompt / Protocol
-↓
-Skill Intake Compiler
-↓
-Capability Classification
-↓
-Repository Mapping
-↓
-Process Tree Mapping
-↓
-Similarity Analysis
-↓
-Proposal Package
-↓
-Validation
-↓
-Promotion Review
-↓
-Canonical Skill
+docs/guides/GETTING_STARTED.md
 ```
 
-Stages:
-
-- Prompt / Protocol: submitted source expertise.
-- Skill Intake Compiler: official entry point for new expertise.
-- Capability Classification: maps the submission to a capability family.
-- Repository Mapping: proposes where the skill would live if promoted.
-- Process Tree Mapping: identifies execution order, artifacts, and gates.
-- Similarity Analysis: checks whether the proposal is new, duplicate,
-  replacement, enhancement, or workflow-related.
-- Proposal Package: packages metadata, reports, checks, and source prompts.
-- Validation: checks prompt fidelity, package completeness, placement, Process
-  Tree impact, and governance.
-- Promotion Review: human/governance review before canonicalization.
-- Canonical Skill: approved reusable skill under `skills/`.
-
-## Prompt Immutability
-
-Submitted prompts are source artifacts. The framework preserves them verbatim.
-
-The framework may:
-
-- classify
-- annotate
-- map
-- package
-- validate
-
-The framework may not:
-
-- rewrite
-- optimize
-- improve
-- reinterpret
-
-submitted prompts.
-
-## Proposal-First Evolution
-
-New contributions become proposals first. Approved assets remain stable.
-Promotion occurs through governance, not direct modification.
-
-Proposal intake zones live under:
+Command index:
 
 ```text
-proposals/
+docs/commands/README.md
 ```
 
-Skill proposal templates live under:
+Framework internals:
 
 ```text
-proposals/templates/skill-proposal-template/
+docs/framework/README.md
 ```
 
-## Process Tree Awareness
-
-Every proposed skill is mapped to both repository placement and Process Tree
-placement before promotion. Repository placement explains where the asset would
-live. Process Tree placement explains when it runs, what it consumes, what it
-produces, and whether it changes approval gates.
-
-The active default canonical Process Tree is:
+Execution governance:
 
 ```text
-process-trees/default.md
+docs/execution/README.md
 ```
-
-## Capability Classification
-
-Capability families:
-
-- strategy
-- ontology
-- requirements
-- ux
-- architecture
-- execution
-- devex
-- governance
-- bootstrapping
-- framework
-
-## Future Self-Expansion
-
-ai-driven-sdlc is designed to absorb new expertise over time while preserving
-approved assets. The Skill Evolution System gives future agents a governed path
-to classify, package, validate, review, and promote new capabilities without
-vendor lock-in or silent framework drift.
 
 ## Current Status
 
-This repository currently contains only the lightweight foundation. It does not
-yet include full skills, workflow definitions, schemas, a Process Tree CLI, or a
-production installer.
+This repository is early but usable as a local framework package.
 
-## Next Step
+The installer creates a `.ai-sdlc/` folder with framework assets. The command
+behavior is still performed by the AI agent reading the installed instructions;
+there is not yet a CLI, daemon, schema validator, or background automation.
 
-Define the `.ai-sdlc/` installation layout and the minimal manifest schema that
-future installers and workflows will use.
+## For Framework Contributors
+
+The framework itself is organized around:
+
+- `docs/framework/`: conceptual models and contracts
+- `docs/execution/`: governance and validation rules
+- `docs/commands/`: user-facing command specs and command history
+- `process-trees/`: SDLC execution maps
+- `skills/`: canonical skill packages
+- `proposals/`: proposed assets and promotion evidence
+- `templates/`: future package templates
+
+Keep framework changes proposal-first, traceable, and agent-agnostic.

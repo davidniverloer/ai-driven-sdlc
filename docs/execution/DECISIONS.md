@@ -699,3 +699,161 @@ skill proposals only, preserves submitted prompts verbatim, and must never
 create canonical skills, promote skills, modify approved skills, modify
 approved workflows, modify canonical Process Trees, bypass validation, or bypass
 governance.
+
+## ADR-0026: Establish Beginner Onboarding and Safe First Installer
+
+Date: 2026-07-03
+Status: Accepted
+
+### Context
+
+ai-driven-sdlc had substantial framework architecture but lacked a clear
+non-expert onboarding path. The README was too focused on internals, and
+`install.sh` was still a placeholder, preventing users from installing a local
+`.ai-sdlc/` operating layer and trying the framework safely.
+
+### Decision
+
+Rewrite `README.md` around user onboarding, create
+`docs/guides/GETTING_STARTED.md`, and implement a conservative first installer
+in `install.sh`.
+
+The installer supports:
+
+- `./install.sh [--dry-run] /path/to/target-repository`
+- creation of `.ai-sdlc/`
+- backup of any existing `.ai-sdlc/`
+- copying framework assets, commands, guides, Process Trees, skills, workflows,
+  schemas, templates, and proposal templates
+- writing an install manifest
+
+### Consequences
+
+The project is now locally installable as a documentation and operating-layer
+package. The installer does not modify application code, install a daemon, run
+AI commands automatically, implement schema validation, or provide production
+upgrade behavior. Manifest-aware uninstall is addressed later in ADR-0027.
+Machine-readable command manifests remain future work.
+
+## ADR-0027: Establish Safe Manifest-Aware Uninstall
+
+Date: 2026-07-03
+Status: Accepted
+
+### Context
+
+The first installer can create `.ai-sdlc/`, but the uninstaller was still a
+placeholder. Users need a safe way to remove the framework layer without risking
+application code or user-modified files.
+
+### Decision
+
+Implement `uninstall.sh` as a conservative manifest-aware uninstaller.
+
+The uninstaller supports:
+
+- `./uninstall.sh [--dry-run] /path/to/target-repository`
+- clean exit when `.ai-sdlc/` is absent
+- refusal when `.ai-sdlc/manifest.txt` is missing
+- moving `.ai-sdlc/` to `.ai-sdlc.removed-<timestamp>/`
+- no changes outside `.ai-sdlc/`
+
+### Consequences
+
+Uninstall behavior is reversible and avoids destructive deletion. The first
+version removes the installed framework layer by moving the whole directory
+instead of deleting individual files. Future schema-backed manifests may allow
+more granular uninstall behavior.
+
+## ADR-0028: Add Remote Bootstrap Installer Entry Point
+
+Date: 2026-07-03
+Status: Accepted
+
+### Context
+
+The README exposed a one-line command that cloned ai-driven-sdlc into a
+temporary directory and ran `install.sh`, but the command was too mechanical for
+non-expert users. The project needs a readable one-line install path while
+keeping the local installer as the authoritative implementation.
+
+### Decision
+
+Add `bootstrap.sh` as a thin remote entry point for installation.
+
+The bootstrap script:
+
+- is invoked by the README through `curl -fsSL .../bootstrap.sh | sh -s -- ...`
+- clones ai-driven-sdlc into a temporary directory
+- delegates all installation behavior to `install.sh`
+- passes installer arguments through unchanged, including `--dry-run`
+- cleans up the temporary clone after installation
+- records the repository URL and ref in the install manifest through
+  `AI_SDLC_INSTALL_SOURCE`
+
+### Consequences
+
+The public installation instruction is now easier to read and copy. Core install
+behavior remains centralized in `install.sh`. The bootstrap URL only becomes
+usable after `bootstrap.sh` is published on the target branch.
+
+## ADR-0029: Default Install and Uninstall Target to Current Directory
+
+Date: 2026-07-03
+Status: Accepted
+
+### Context
+
+The install instructions still required users to pass `/path/to/your-project`.
+That does not match the normal mental model for command-line installers: users
+expect to `cd` into the project and run the command there.
+
+### Decision
+
+Default install and uninstall target paths to the current directory.
+
+This applies to:
+
+- `bootstrap.sh`
+- `install.sh`
+- `uninstall.sh`
+- README install and uninstall examples
+- getting started guide install and uninstall examples
+
+Explicit target paths remain supported for users who want to install into a
+different repository.
+
+### Consequences
+
+The public one-line install command is shorter and easier to understand.
+Install and uninstall behavior remains safe because scripts still write only to
+or move only the target repository's `.ai-sdlc/` directory.
+
+## ADR-0030: Install the Uninstaller Inside the Operating Layer
+
+Date: 2026-07-03
+Status: Accepted
+
+### Context
+
+The README now supports a remote one-line install command. Users who install
+that way do not have `./uninstall.sh` in their project root, so uninstall
+instructions must point to an installed command that actually exists in the
+target repository.
+
+### Decision
+
+Copy `uninstall.sh` into the installed `.ai-sdlc/` operating layer as
+`.ai-sdlc/uninstall.sh`.
+
+Document uninstall usage as:
+
+```sh
+.ai-sdlc/uninstall.sh
+```
+
+### Consequences
+
+Every installed repository gets a local uninstall entry point. The uninstaller
+still defaults to the current directory, requires `.ai-sdlc/manifest.txt`, and
+moves `.ai-sdlc/` to a timestamped backup instead of deleting it.

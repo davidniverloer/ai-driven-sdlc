@@ -145,6 +145,7 @@ Example:
 The command documentation is installed at:
 
 ```text
+.ai-sdlc/commands/manifest.md
 .ai-sdlc/commands/skill-create.md
 ```
 

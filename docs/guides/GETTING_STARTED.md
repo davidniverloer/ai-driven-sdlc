@@ -51,7 +51,7 @@ another local coding assistant.
 Ask the agent to read:
 
 ```text
-.ai-sdlc/commands/README.md
+.ai-sdlc/commands/manifest.md
 .ai-sdlc/guides/SKILL_CREATE_COMMAND.md
 .ai-sdlc/process-trees/default.md
 ```

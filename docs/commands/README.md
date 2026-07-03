@@ -6,6 +6,18 @@ Official commands are user-facing trigger phrases that activate governed
 framework workflows. Command history files record repository initialization and
 framework evolution work.
 
+When installed into a repository, command discovery starts at:
+
+```text
+.ai-sdlc/commands/manifest.md
+```
+
+The source manifest lives at:
+
+```text
+docs/commands/manifest.md
+```
+
 ## Official Commands
 
 ### /skill-create
@@ -69,10 +81,8 @@ docs/commands/create-process-tree.md
 
 Purpose: define a governed Process Tree creation request.
 
-## Future Installation Boundary
+## Installation Boundary
 
-This index is documentation only. It is not an installed `.ai-sdlc/` command
-manifest.
-
-An installed command manifest should be introduced only after installation
-layout and manifest governance are defined.
+This index remains the source documentation index. The installed command
+manifest is a lightweight Markdown discovery file, not yet a schema-backed
+command registry.

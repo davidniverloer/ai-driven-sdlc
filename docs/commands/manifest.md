@@ -61,6 +61,7 @@ Agents must not:
 Read these before executing command behavior:
 
 ```text
+.ai-sdlc/guides/FIRST_RUN.md
 .ai-sdlc/process-trees/default.md
 .ai-sdlc/framework/SKILL_INTAKE_COMPILER.md
 .ai-sdlc/framework/SKILL_PROPOSAL_MODEL.md

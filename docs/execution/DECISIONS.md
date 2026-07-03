@@ -890,3 +890,30 @@ Installed repositories now have a first command discovery file. The manifest is
 Markdown only and remains agent-readable, not machine-readable. Future command
 metadata schemas can evolve separately after command manifest schema governance
 is defined.
+
+## ADR-0032: Add Installed First-Run Guide
+
+Date: 2026-07-03
+Status: Accepted
+
+### Context
+
+Installed repositories now include a command manifest, but users and agents
+still need a concise first-run path that explains what to check, what to read,
+what command to start with, and what actions are unsafe at the beginning.
+
+### Decision
+
+Add `docs/guides/FIRST_RUN.md` as the source first-run guide installed to:
+
+```text
+.ai-sdlc/guides/FIRST_RUN.md
+```
+
+Reference it from the command manifest, getting started guide, and README.
+
+### Consequences
+
+Installed repositories now have a practical first-run checklist. The guide is
+documentation only; it does not add automation, schemas, or executable workflow
+behavior.
